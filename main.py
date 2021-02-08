@@ -21,6 +21,14 @@ def get_db():
 ###calling the db from the database###########
 models.Base.metadata.create_all(bind=engine)
 
+####creating the user API###
+@course_router.post("/users", response_model=schemas.Users)
+async def create_user(user: schemas.NewUser, db: Session = Depends(get_db)):
+    
+    insert_status = crud.create_user(db=db, user=user)
+    print(insert_status)
+    return insert_status.__dict__
+
 
 ####creating a Domain Request###
 @course_router.post("/domains/create")
@@ -43,5 +51,12 @@ async def create_category(domain_name: str, cat_name: schemas.categories_create,
 @course_router.post('/{category}/createcourse')
 async def create_course(category: str, course_name: schemas.NewCourses, db: Session = Depends(get_db)):
 	category_id = crud.get_category(db, category).id
-	user_id = crud.get_users(db, course_name.created_by)
-    
+	print(category_id)
+	user_id = crud.get_user(db, course_name.created_by).id
+	course_create = crud.createCourses(db, category_id, user_id, course_name)
+	return course_create
+
+@course_router.get('/{category_name}/courses')
+async def get_courses_by_name_category(category_name: str, db: Session = Depends(get_db)):
+	category_courses = crud.get_courses_by_category_name(db,category_name)
+	return category_courses

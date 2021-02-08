@@ -22,7 +22,7 @@ class Users(Base):
 	name = Column(String, index = True)
 	email = Column(String, unique = True, index = True)
 	password = Column(String)
-	active_yn = Column(Boolean, default=True)
+	is_active = Column(Boolean, default=True)
 	joined_on = Column(Integer, index = True)
 
 	user_course = relationship("Courses", back_populates="course_users")

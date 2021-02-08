@@ -18,7 +18,7 @@ class NewUser(BaseModel):
 	email:str
 	password:str
 
-
+#users output as a response.
 class Users(UsersCreate):
 	id:int
 	class config:
@@ -27,17 +27,13 @@ class Users(UsersCreate):
 
 
 ########Domain_Schema#######
-
 class Domain_Create(BaseModel):
-	
 	domain_name:str
 
 
 
 ####categories_Schema####
-
 class categories_create(BaseModel):
-
 	cat_name:str
 
 
@@ -62,7 +58,7 @@ class categories_create(BaseModel):
 class NewCourses(BaseModel):
 	created_by: str
 	course_name:str
-	course_category:str
+	#course_category:str
 	course_source:str
 	course_link:str
 	course_description:str
