@@ -43,6 +43,14 @@ def get_category(db: Session, category_name: str):
 def get_user(db: Session, user_name: str):
 	return db.query(models.Users).filter(models.Users.name == user_name).first()
 
+def get_course(db: Session, course_name: str):
+	course_details=db.query(models.Courses).filter(models.Courses.course_name == course_name).first()
+	print(course_details.upvotes)
+	return course_details
+
+def get_feedback(db: Session, question: int):
+	question_details = db.query(models.Questions).filter(models.Questions.course_id==question).first()
+
 
 def create_categories(db: Session, domain_id:int, category: schemas.categories_create):
 
@@ -66,5 +74,48 @@ def get_courses_by_category_name(db: Session, category_name: str):
 	cat_id = get_category(db, category_name).id
 	return db.query(models.Courses).filter(models.Courses.categories_id == cat_id).all()
 
+def get_categories_by_domain_name(db: Session, domain_name: str):
+	domain_id = get_domain(db, domain_name).id
+	return db.query(models.Categories).filter(models.Categories.domain_id == domain_id).all()
+
+def upvote_course(db: Session, course_name: str):
+	course_id = get_course(db, course_name)
+	course=course_id.__dict__
+	#print(course.upvotes)
+	courseUpvote= course['upvotes']
+	print(type(courseUpvote))
+	#course_upvote = db.query(models.Courses).filter(models.Courses.id == course_id).update({'models.Courses.upvotes': models.Courses.upvotes + 1})
+	course_upvote = db.query(models.Courses).filter(models.Courses.id == course_id.id).update({'upvotes': courseUpvote + 1})
+	db.commit()
+	return course_upvote
 	
+def downvote_course(db: Session, course_name: str):
+	course_id = get_course(db, course_name)
+	course=course_id.__dict__
+	#print(course.upvotes)
+	courseDownvote= course['downvotes']
+	#$print(type(courseUpvote))
+	#course_upvote = db.query(models.Courses).filter(models.Courses.id == course_id).update({'models.Courses.upvotes': models.Courses.upvotes + 1})
+	course_down_vote = db.query(models.Courses).filter(models.Courses.id == course_id.id).update({'downvotes': courseDownvote - 1})
+	db.commit()
+	return course_down_vote
+	
+def create_course_feedback(db: Session, course_id: int, feed: schemas.Questions):
+
+	feedback_details = models.Questions(course_id = course_id, Question_1= feed.Question_1, Question_2= feed.Question_2, Question_3= feed.Question_3, upvotes = 0, downvotes = 0)
+	db.add(feedback_details)
+	db.commit()
+	db.refresh(feedback_details)
+	return feedback_details
+
+
+def get_feed_by_course(db: Session, course_name: str):
+	course_id = get_course(db, course_name).id
+	return db.query(models.Questions).filter(models.Questions.course_id == course_id).first()
+
+def upvoteFeedback(db: Session, course_name: str, questions:int):
+	course_id = get_course(db, course_name).id
+	question_id = get_feed_by_course(db, course_id).id
+	return db.query(models.Questions).filter(models.Questions.course_id == question_id).update('upvotes': )
+
 

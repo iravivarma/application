@@ -69,3 +69,12 @@ class NewCourses(BaseModel):
 #######contributing 0r create button that is not related to anything. If you dont know to how to contribute you can contribute using this thing####
 class Courses(NewCourses):
 	domain_name: str
+
+
+class Questions(BaseModel):
+	Question_1: int
+	Question_2: int
+	Question_3: int
+
+class feedback(Questions):
+	course_name: str 

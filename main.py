@@ -60,3 +60,37 @@ async def create_course(category: str, course_name: schemas.NewCourses, db: Sess
 async def get_courses_by_name_category(category_name: str, db: Session = Depends(get_db)):
 	category_courses = crud.get_courses_by_category_name(db,category_name)
 	return category_courses
+
+@course_router.get('/{domain_name}/categories')
+async def get_categories_by_name_domain(domain_name: str, db: Session = Depends(get_db)):
+	domain_categories = crud.get_categories_by_domain_name(db, domain_name)
+	return domain_categories
+
+@course_router.post('/{course_name}/upvote')
+async def course_upvotes(course_name:str, db: Session = Depends(get_db)):
+	courseupvote = crud.upvote_course(db, course_name)
+	return courseupvote
+
+@course_router.post('/{course_name}/downvote')
+async def course_downvote(course_name: str, db: Session = Depends(get_db)):
+	coursedownvote = crud.downvote_course(db, course_name)
+	return coursedownvote
+
+
+@course_router.post('/{course_name}/questions')
+async def create_questions(course_name: str, question: schemas.Questions, db: Session = Depends(get_db)):
+	course_id = crud.get_course(db, course_name).id
+	questions = crud.create_course_feedback(db, course_id, question)
+	return questions
+
+@course_router.get('/{course_name}/feedback')
+async def get_feedback_by_course(course_name: str, db: Session = Depends(get_db)):
+	course_feedback= crud.get_feed_by_course(db, course_name)
+	return course_feedback
+
+
+@course_router.post('/{course_name}/{questions}/upvote')
+async def feedback_upvote(course_name: str, questions: int, db: Session= Depends(get_db)):
+	feedbackUpvote= crud.upvoteFeedback(db, course_name, questions)
+	return feedbackUpvote
+

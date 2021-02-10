@@ -64,10 +64,28 @@ class Courses(Base):
 	course_medium = Column(String)
 	level = Column(String)
 	views = Column(Integer)
-	upvotes = Column(Integer)
+	upvotes = Column(Integer, default = 0)
+	downvotes = Column(Integer, default = 0)
 
 	course_cat = relationship("Categories", back_populates="cat_courses")
 	course_users = relationship("Users", back_populates="user_course")
+	courses_feed = relationship("Questions", back_populates = "feed_on_courses")
+
+
+class Questions(Base):
+	__tablename__ = "feedback"
+
+	id = Column(Integer, primary_key=True, index = True)
+	course_id = Column(Integer, ForeignKey("courses.id"))
+	Question_1 = Column(Integer)
+	Question_2 = Column(Integer)
+	Question_3 = Column(Integer)
+	upvotes = Column(Integer, default = 0)
+	downvotes = Column(Integer, default = 0)
+
+	feed_on_courses =relationship('Courses', back_populates= "courses_feed")
+
+
 
 
 
@@ -79,3 +97,4 @@ Users.__table__.create(bind=engine, checkfirst=True)
 Domain.__table__.create(bind=engine, checkfirst=True)
 Categories.__table__.create(bind=engine, checkfirst=True)
 Courses.__table__.create(bind=engine, checkfirst=True)
+Questions.__table__.create(bind=engine, checkfirst=True)
