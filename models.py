@@ -22,8 +22,10 @@ class Users(Base):
 	name = Column(String, index = True)
 	email = Column(String, unique = True, index = True)
 	password = Column(String)
-	is_active = Column(Boolean, default=True)
+	active_yn = Column(Boolean, default=True)
 	joined_on = Column(Integer, index = True)
+	recovery_password = Column(String, default = '')
+	recovery_yn = Column(Boolean, default = True)
 
 	user_course = relationship("Courses", back_populates="course_users")
 
@@ -43,7 +45,7 @@ class Categories(Base):
 	id = Column(Integer, primary_key = True, index = True)
 	domain_id =Column(Integer, ForeignKey("domains.id"), index = True)
 	name = Column(String, index = True)
-	created_date = Column(Integer, index = True)
+	created_date = Column(String, index = True)
 
 	domain_type = relationship("Domain", back_populates="cat_type")
 	cat_courses = relationship("Courses", back_populates="course_cat")
@@ -62,10 +64,9 @@ class Courses(Base):
 	description = Column(String)
 	course_type = Column(String)
 	course_medium = Column(String)
-	level = Column(String)
-	views = Column(Integer)
+	level = Column(String)######give datatype Level
+	views = Column(Integer, default = 0)
 	upvotes = Column(Integer, default = 0)
-	downvotes = Column(Integer, default = 0)
 
 	course_cat = relationship("Categories", back_populates="cat_courses")
 	course_users = relationship("Users", back_populates="user_course")

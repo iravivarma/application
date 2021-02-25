@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            New User Signup
+        </title>
+    </head>
+    <body>
+        <h3>Hi, Welcome to Workeeper</h3><br>
+        <h3>Please enter the details below to get started</h3><br>
+
+        <div>
+            <form method="post" action="/new_user/" id="signup_form">
+
+                <label for="signup_form">Username : </label>
+                <input type="text" name="name" id="name" required><br>
+
+                <label for="signup_form">Email : </label>
+                <input type="text" name="email" id="email" required><br>
+
+                <label for="signup_form">Password : </label>
+                <input type="password" name="password" id="password" required><br>
+
+                <label for="signup_form">mobile_no : </label>
+                <input type="text" name="mobile_no" id="mobile_no" required><br>
+
+
+                <br><br>
+                <input type="submit" value="Submit">
+                <br>
+                Alerady a user? Login <a id="login" href="/login">here</a>!
+            </form>
+        </div>
+        <script>
+            const params = new URLSearchParams(document.location.search);
+            var link = params.get("redirect_url");
+            var r_url = "/login";
+            if(link!=null) {
+                r_url+="/?redirect_url="+link;
+                document.getElementById("signup_form").action = "/new_user?redirect_url="+link;
+            }
+            document.getElementById("login").href = r_url;
+        </script>
+
+    </body>
+</html>

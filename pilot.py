@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from main import course_router
-# from security import security_router
+from security import security_router
 import uvicorn
 from sqlalchemy.orm import Session
 import crud, models, schemas
@@ -27,7 +27,7 @@ app = FastAPI(title='workpeer',
 def init_routers(app: FastAPI) -> None:
     #app.include_router(home_router)
     app.include_router(course_router, prefix='', tags=['courses'])
-    #app.include_router(security_router, prefix='', tags=['Security'])
+    app.include_router(security_router, prefix='', tags=['Security'])
 
 
 def create_app() -> FastAPI:
@@ -46,7 +46,7 @@ def create_app() -> FastAPI:
 app = create_app()
 
 
-
+ 
 origins = [
     "*",
 ]
