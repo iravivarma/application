@@ -4,10 +4,11 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 
-DATABASE_URL = os.environ.get("postgresql://postgres:qwerty@localhost:5432/course_website")
+#SQLALCHEMY_DATABASE_URL = os.environ.get("postgresql://postgres:qwerty@localhost:5432/course_website")
+SQLALCHEMY_DATABASE_URL = os.environ.get('DATABASE_URL')
 
 engine = create_engine(
-    DATABASE_URL
+    SQLALCHEMY_DATABASE_URL
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
