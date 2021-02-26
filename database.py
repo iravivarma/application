@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 
-SQLALCHEMY_DATABASE_URL = os.environ.get("postgresql://postgres:qwerty@localhost:5432/course_website")
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:qwerty@localhost:5432/course_website"
 #SQLALCHEMY_DATABASE_URL = os.environ.get('DATABASE_URL')
 print(SQLALCHEMY_DATABASE_URL)
 
