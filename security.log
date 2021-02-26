@@ -1807,3 +1807,37 @@ sqlalchemy.exc.ArgumentError: Object <models.Questions object at 0x0000027624CD7
 2021-02-25 12:03:08.651 INFO main - shutdown: Shutting down
 2021-02-25 12:03:08.668 ERROR basereload - signal_handler: Could not stop child process 19628: [Errno 10] No child processes
 2021-02-25 12:03:08.727 INFO basereload - shutdown: Stopping reloader process [20452]
+2021-02-26 21:21:38.931 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2021-02-26 21:21:38.932 INFO basereload - startup: Started reloader process [7404] using statreload
+2021-02-26 21:21:40.155 INFO main - serve: Started server process [13592]
+2021-02-26 21:21:40.156 INFO on - startup: Waiting for application startup.
+2021-02-26 21:21:40.157 INFO on - startup: Application startup complete.
+2021-02-26 21:21:50.113 INFO main - shutdown: Shutting down
+2021-02-26 21:21:50.160 ERROR basereload - signal_handler: Could not stop child process 13592: [Errno 10] No child processes
+2021-02-26 21:21:50.168 INFO basereload - shutdown: Stopping reloader process [7404]
+2021-02-26 21:22:03.900 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2021-02-26 21:22:03.900 INFO basereload - startup: Started reloader process [7496] using statreload
+2021-02-26 21:22:05.038 INFO main - serve: Started server process [19560]
+2021-02-26 21:22:05.038 INFO on - startup: Waiting for application startup.
+2021-02-26 21:22:05.040 INFO on - startup: Application startup complete.
+2021-02-26 21:22:34.090 INFO main - shutdown: Shutting down
+2021-02-26 21:22:34.153 ERROR basereload - signal_handler: Could not stop child process 19560: [Errno 10] No child processes
+2021-02-26 21:22:34.162 INFO basereload - shutdown: Stopping reloader process [7496]
+2021-02-26 21:24:21.244 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2021-02-26 21:24:21.244 INFO basereload - startup: Started reloader process [3160] using statreload
+2021-02-26 21:24:22.382 INFO main - serve: Started server process [8892]
+2021-02-26 21:24:22.383 INFO on - startup: Waiting for application startup.
+2021-02-26 21:24:22.384 INFO on - startup: Application startup complete.
+2021-02-26 21:24:35.214 INFO main - shutdown: Shutting down
+2021-02-26 21:24:35.322 INFO on - shutdown: Waiting for application shutdown.
+2021-02-26 21:24:35.322 INFO on - shutdown: Application shutdown complete.
+2021-02-26 21:24:35.324 INFO main - serve: Finished server process [8892]
+2021-02-26 21:24:35.370 ERROR basereload - signal_handler: Could not stop child process 8892: [Errno 10] No child processes
+2021-02-26 21:24:35.379 INFO basereload - shutdown: Stopping reloader process [3160]
+2021-02-26 21:28:34.982 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2021-02-26 21:28:34.983 INFO basereload - startup: Started reloader process [20092] using statreload
+2021-02-26 21:28:36.121 INFO main - serve: Started server process [2468]
+2021-02-26 21:28:36.121 INFO on - startup: Waiting for application startup.
+2021-02-26 21:28:36.121 INFO on - startup: Application startup complete.
+2021-02-26 21:28:56.244 ERROR basereload - signal_handler: Could not stop child process 2468: [Errno 10] No child processes
+2021-02-26 21:28:56.252 INFO basereload - shutdown: Stopping reloader process [20092]
