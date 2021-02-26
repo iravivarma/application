@@ -104,6 +104,7 @@ python-jose==3.2.0
 python-multipart==0.0.5
 python-usernames==0.3.1
 pytz==2020.1
+psycopg2-binary==2.8.6
 pywinpty==0.5.7
 PyYAML==5.3.1
 pyzmq==19.0.2
