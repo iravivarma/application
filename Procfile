@@ -1,2 +1,2 @@
   
-web: python pilot.pydir
+web: python pilot.py
