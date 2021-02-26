@@ -86,7 +86,6 @@ premailer==3.7.0
 prometheus-client==0.8.0
 promise==2.3
 prompt-toolkit==3.0.8
-psycopg2==2.8.6
 ptyprocess==0.6.0
 py==1.9.0
 pyasn1==0.4.8
@@ -106,7 +105,6 @@ python-jose==3.2.0
 python-multipart==0.0.5
 python-usernames==0.3.1
 pytz==2020.1
-pywin32==300
 pywinpty==0.5.7
 PyYAML==5.3.1
 pyzmq==19.0.2
@@ -133,7 +131,6 @@ typing-extensions==3.7.4.3
 ujson==3.2.0
 urllib3==1.25.11
 uvicorn==0.11.8
-vboxapi==1.0
 virtualenv==20.2.1
 wcwidth==0.2.5
 webencodings==0.5.1
