@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 DATABASE_URL = "postgresql://postgres:qwerty@localhost:5432/course_website"
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL
+    DATABASE_URL
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
