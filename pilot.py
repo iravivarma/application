@@ -59,6 +59,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.debug = True
+
+
+models.Base.metadata.create_all(bind=engine)
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
 
 if __name__ == "__main__":
-    uvicorn.run("pilot:app", host="127.0.0.1", port=5000, reload=True)
+    #uvicorn.run("pilot:app", host="127.0.0.1", port=5000, reload=True)
+    app.run(debug=True)
