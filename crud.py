@@ -5,7 +5,7 @@ from fastapi.responses import Response
 import models, schemas
 from sqlalchemy import and_, or_, not_
 from sqlalchemy.orm import load_only
-
+import datetime
 from models import Users, Courses, Categories, Domain
 
 
@@ -31,7 +31,7 @@ def create_user(db: Session, user: schemas.NewUser):
 	'''
 	print(user.__dict__)
 	password = user.password
-	user_details = models.Users(name = user.name, email = user.email, password= password, joined_on = 123)
+	user_details = models.Users(name = user.name, email = user.email, password= password, joined_on = str(datetime.datetime.now()))
 	db.add(user_details)
 	db.commit()
 	db.refresh(user_details)
@@ -57,6 +57,9 @@ def get_domain(db: Session, domain_name: str):
 	domain_name of the Domain class by comparing with the input paramter.
 	'''
 	return db.query(models.Domain).filter(models.Domain.domain_name == domain_name).first()
+
+def get_all_domains(db: Session):
+	return db.query(models.Domain)
 
 def get_category(db: Session, category_name: str):
 	'''
@@ -285,7 +288,9 @@ def get_courses_by_username(db: Session, user_id: int):
 	return db.query(models.Courses).filter(models.Courses.created_by == user_id).with_entities(Courses.course_name).all()
 
 def get_domain_id_by_name(db:Session, domain_name: int):
-	return db.query(models.Domain).filter(models.Domain.domain_name == domain_name).with_entities(Domain.id)
+	return db.query(models.Domain).filter(models.Domain.domain_name == domain_name).with_entities(Domain.id).first()
+
+# def get all_domains(db: Session, )
 
 
 def delete_questions(db:Session, question_id: int):

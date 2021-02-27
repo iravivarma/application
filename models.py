@@ -24,7 +24,7 @@ class Users(Base):
 	email = Column(String, unique = True, index = True)
 	password = Column(String)
 	active_yn = Column(Boolean, default=True)
-	joined_on = Column(Integer, index = True)
+	joined_on = Column(String, index = True)
 	recovery_password = Column(String, default = '')
 	recovery_yn = Column(Boolean, default = True)
 
@@ -95,8 +95,8 @@ class Questions(Base):
     
 
 
-Users.__table__.create(bind=engine, checkfirst=True)
-Domain.__table__.create(bind=engine, checkfirst=True)
-Categories.__table__.create(bind=engine, checkfirst=True)
-Courses.__table__.create(bind=engine, checkfirst=True)
-Questions.__table__.create(bind=engine, checkfirst=True)
+# Users.__table__.create(bind=engine, checkfirst=True)
+# Domain.__table__.create(bind=engine, checkfirst=True)
+# Categories.__table__.create(bind=engine, checkfirst=True)
+# Courses.__table__.create(bind=engine, checkfirst=True)
+# Questions.__table__.create(bind=engine, checkfirst=True)
