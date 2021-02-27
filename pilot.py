@@ -10,7 +10,7 @@ from fastapi import Request, Depends
 #import logging
 #from qr_logger import create_or_get_logger, log_warning
 from fastapi.middleware.cors import CORSMiddleware#, SessionMiddleware
-from starlette.middleware.gzip import GZipMiddleware
+#from starlette.middleware.gzip import GZipMiddleware
 
 
 # filename = "pilot.log"
