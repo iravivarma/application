@@ -62,9 +62,9 @@ class Courses(Base):
 	course_name = Column(String, index = True)
 	course_source = Column(String)
 	course_link = Column(String, index = True)
-	description = Column(String)
+	description = Column(String, default = '')
 	course_tags = Column(JSON)
-	level = Column(String)######give datatype Level
+	#level = Column(String)######give datatype Level
 	views = Column(Integer, default = 0)
 	upvotes = Column(Integer, default = 0)
 
@@ -97,5 +97,5 @@ class Questions(Base):
 # Users.__table__.create(bind=engine, checkfirst=True)
 # Domain.__table__.create(bind=engine, checkfirst=True)
 # Categories.__table__.create(bind=engine, checkfirst=True)
-# Courses.__table__.create(bind=engine, checkfirst=True)
-# Questions.__table__.create(bind=engine, checkfirst=True)
+Courses.__table__.create(bind=engine, checkfirst=True)
+Questions.__table__.create(bind=engine, checkfirst=True)

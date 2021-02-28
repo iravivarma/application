@@ -6,6 +6,7 @@ from database import SessionLocal, engine
 from sqlalchemy.orm import Session
 from models import Users, Courses, Categories, Domain
 import csv 	
+import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -98,11 +99,30 @@ for filename in os.listdir('E://coursewebsite/website/application/programming/')
 			domain= file_name[-2]
 			category=file_name[-1].split('_')
 			cat_id = crud.get_category(db, category[1]).id
-			user_id = crud.get_user(db, 'Ravi').id
-			print(user_id)
+			# user_id = crud.get_user(db, 'Ravi').user_id
+			# print(user_id)
 			print(category)
 			print(domain)
-			print(cat_id)
+			# print(cat_id)
+# for filename in os.listdir('E://coursewebsite/website/application/design/'):
+# 	print(filename)
+# 	if filename.endswith('.csv'):
+# 		# with open('E://coursewebsite/website/application/programming/' + filename, mode='r') as curr_file:
+# 		# 	print(curr_file)
+# 		#df = pd.read_csv(curr_file)
+# 		#print('E://coursewebsite/website/application/design/'+filename)
+# 		df = pd.read_csv('E://coursewebsite/website/application/design/'+filename)
+# 		print(df)
+# 		df.columns=["course_name",
+# 			"course_link",
+# 			"course_source",
+# 			"course_tags"]
+		#print(df.columns)
+		#file_name = df.name.split('/')
+		#print(file_name)
+
+
+
 
 
 

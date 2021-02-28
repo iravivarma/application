@@ -63,11 +63,11 @@ template_dir = os.path.dirname(
     os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 )
 #template_dir = os.path.join(template_dir, "E")
-template_dir = os.path.join(template_dir, "website")
-template_dir = os.path.join(template_dir, "templates")
-print(template_dir)
+# template_dir = os.path.join(template_dir, "website")
+# template_dir = os.path.join(template_dir, "templates")
+# print(template_dir)
 
-templates = Jinja2Templates(directory=template_dir)
+templates = Jinja2Templates(directory='templates')
 
 SECRET_KEY = "bfdhvsdvfakuydgvfkajhsvlawegfUIFBVLjhvfulYFVsyuVFjavsfljv"
 ALGORITHM = "HS256"
