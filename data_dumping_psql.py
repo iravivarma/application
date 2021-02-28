@@ -11,6 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import datetime
 import time
+import os
 
 
 
@@ -51,40 +52,57 @@ db = SessionLocal()
 
 models.Base.metadata.create_all(bind=engine)
 
-with open('E://coursewebsite/website/application/Domains.csv', "r") as f:
-	csv_reader = csv.DictReader(f)	
+# with open('E://coursewebsite/website/application/Domains.csv', "r") as f:
+# 	csv_reader = csv.DictReader(f)	
 
-	for row in csv_reader:
-		print(row)
-		time.sleep(1)
-		db_record = models.Domain(
-			domain_name = row["domain_name"])
+# 	for row in csv_reader:
+# 		print(row)
+# 		time.sleep(1)
+# 		db_record = models.Domain(
+# 			domain_name = row["domain_name"])
 
-		db.add(db_record)
+# 		db.add(db_record)
 
-	db.commit()
+# 	db.commit()
 
-db.close()
+# db.close()
 
-with open("E://coursewebsite/website/application/design-categories.csv", "r") as f:
-	csv_reader = csv.DictReader(f)
-	domain_id = crud.get_domain_id_by_name(db, 'design').id
-	print(domain_id)
-	print(type(domain_id))
-	today = datetime.datetime.now()
-	print(today)
-	print(type(today))
-	for row in csv_reader:
-		print(row)
-		# time.sleep(1)
+# with open("E://coursewebsite/website/application/design-categories.csv", "r") as f:
+# 	csv_reader = csv.DictReader(f)
+# 	domain_id = crud.get_domain_id_by_name(db, 'design').id
+# 	print(domain_id)
+# 	print(type(domain_id))
+# 	today = datetime.datetime.now()
+# 	print(today)
+# 	print(type(today))
+# 	for row in csv_reader:
+# 		print(row)
+# 		# time.sleep(1)
 
-		db_record = models.Categories(name = row["name"], domain_id = domain_id, created_date = str(today))
+# 		db_record = models.Categories(name = row["name"], domain_id = domain_id, created_date = str(today))
 
-		db.add(db_record)
-	db.commit()
+# 		db.add(db_record)
+# 	db.commit()
 
-db.close()	
+# db.close()
 
+
+for filename in os.listdir('E://coursewebsite/website/application/programming/'):
+	if filename.endswith('.csv'):
+		with open('E://coursewebsite/website/application/programming/' + filename, mode='r') as curr_file:
+			file_name = curr_file.name.split('/')
+			reader = csv.DictReader(curr_file)
+			print(file_name)
+			
+			##user_id = get_user(db, 'string')
+			domain= file_name[-2]
+			category=file_name[-1].split('_')
+			cat_id = crud.get_category(db, category[1]).id
+			user_id = crud.get_user(db, 'Ravi').id
+			print(user_id)
+			print(category)
+			print(domain)
+			print(cat_id)
 
 
 

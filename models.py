@@ -26,7 +26,7 @@ class Users(Base):
 	active_yn = Column(Boolean, default=True)
 	joined_on = Column(String, index = True)
 	recovery_password = Column(String, default = '')
-	recovery_yn = Column(Boolean, default = True)
+	recovery_yn = Column(Boolean, default = True)      
 
 	user_course = relationship("Courses", back_populates="course_users")
 
@@ -63,8 +63,7 @@ class Courses(Base):
 	course_source = Column(String)
 	course_link = Column(String, index = True)
 	description = Column(String)
-	course_type = Column(String)
-	course_medium = Column(String)
+	course_tags = Column(JSON)
 	level = Column(String)######give datatype Level
 	views = Column(Integer, default = 0)
 	upvotes = Column(Integer, default = 0)
