@@ -4,6 +4,8 @@ import uvicorn
 from database import SessionLocal, engine
 from fastapi import Request, APIRouter, FastAPI, Depends
 import time
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 from typing import List
 
 
@@ -67,8 +69,18 @@ async def create_category(domain_name: str, cat_name: schemas.categories_create,
 @course_router.get("/userbase")#, response_model=List[schemas.Users])
 async def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = crud.get_users(db, skip=skip, limit=limit)
+    json_compatible_item_data = jsonable_encoder(users)
     print(users)
-    return users
+    return JSONResponse(json_compatible_item_data, safe= False)
+
+@course_router.get("/domains")
+async def get_domains(domain_name: str, db: Session = Depends(get_db)):
+	domain_names = crud.get_domain(db, domain_name)
+	return domain_names
+
+# @course_router.get("/domainbase")
+# async def all_domains(db: SessionLocal = Depends(get_db)):
+# 	return crud.get_all_domains(db)
 
 ####creating the Course requests######
 @course_router.post('/{category}/createcourse')
