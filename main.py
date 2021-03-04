@@ -78,9 +78,9 @@ async def get_domains(domain_name: str, db: Session = Depends(get_db)):
 	domain_names = crud.get_domain(db, domain_name)
 	return domain_names
 
-# @course_router.get("/domainbase")
-# async def all_domains(db: SessionLocal = Depends(get_db)):
-# 	return crud.get_all_domains(db)
+@course_router.get("/domainbase")
+async def all_domains(skip: int = 0, limit: int = 100, db: SessionLocal = Depends(get_db)):
+	return crud.get_all_domains(db, skip = skip, limit = limit)
 
 ####creating the Course requests######
 @course_router.post('/{category}/createcourse')

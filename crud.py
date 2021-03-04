@@ -58,8 +58,8 @@ def get_domain(db: Session, domain_name: str):
 	'''
 	return db.query(models.Domain).filter(models.Domain.domain_name == domain_name).first()
 
-def get_all_domains(db: Session):
-	return db.query(models.Domain)
+def get_all_domains(db: Session, skip: int = 0, limit: int = 100):
+	return db.query(models.Domain).offset(skip).limit(limit).all()
 
 def get_category(db: Session, category_name: str):
 	'''

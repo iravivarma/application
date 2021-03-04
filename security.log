@@ -1937,3 +1937,12 @@ NameError: name 'JsonResponse' is not defined
 2021-03-04 21:03:52.005 INFO on - startup: Application startup complete.
 2021-03-04 21:05:19.980 ERROR basereload - signal_handler: Could not stop child process 11432: [WinError 5] Access is denied
 2021-03-04 21:05:19.996 INFO basereload - shutdown: Stopping reloader process [7612]
+2021-03-04 21:32:58.944 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+2021-03-04 21:32:58.944 INFO basereload - startup: Started reloader process [14108] using statreload
+2021-03-04 21:33:00.436 INFO main - serve: Started server process [20100]
+2021-03-04 21:33:00.437 INFO on - startup: Waiting for application startup.
+2021-03-04 21:33:00.439 INFO on - startup: Application startup complete.
+2021-03-04 21:33:51.027 WARNING statreload - should_restart: Detected file change in 'database.py'. Reloading...
+2021-03-04 21:33:58.337 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-03-04 21:34:03.267 ERROR basereload - signal_handler: Could not stop child process 20404: [Errno 10] No child processes
+2021-03-04 21:34:03.285 INFO basereload - shutdown: Stopping reloader process [14108]
