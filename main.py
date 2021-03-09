@@ -3,7 +3,7 @@ import crud, models, schemas
 import uvicorn
 from database import SessionLocal, engine
 from fastapi import Request, APIRouter, FastAPI, Depends
-import time
+import time, ast
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from typing import List
@@ -107,7 +107,9 @@ async def get_courses_by_name_category(category_name: str, db: Session = Depends
 	"""
 	category_courses = crud.get_courses_by_category_name(db,category_name)
 	for cat_course in category_courses:
-	    print(cat_course)
+	    print(cat_course.course_tags)
+	    if isinstance(cat_course.course_tags, str):
+	        cat_course.course_tags = ast.literal_eval(cat_course.course_tags)
 	return category_courses
 
 @course_router.get('/{domain_name}/categories')
