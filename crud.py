@@ -211,15 +211,16 @@ def get_feed_by_course(db: Session, course_name: str):
 	return db.query(models.Questions).filter(models.Questions.course_id == course_id).first()
 
 def upvoteFeedback(db: Session, course_name: str, questions: int):
+	print(questions)
 	course_id = get_course(db, course_name).id
 	print(course_id)
 	question_id = get_feedback(db, course_id)
 	print(question_id)
 	feed = question_id.__dict__
 	print(feed)
-	feedUpvote= feed['upvotes']
+	feedUpvote= feed[questions]
 	print(feedUpvote)
-	feedbackupvote = db.query(models.Questions).filter(models.Questions.course_id == question_id).update({'upvotes': feedUpvote + 1 })
+	feedbackupvote = db.query(models.Questions).filter(models.Questions.course_id == course_id).update({questions: feedUpvote + 1 })
 	db.commit()
 	return feedbackupvote
 
