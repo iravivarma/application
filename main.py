@@ -71,7 +71,7 @@ async def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_
     users = crud.get_users(db, skip=skip, limit=limit)
     json_compatible_item_data = jsonable_encoder(users)
     print(users)
-    return JSONResponse(json_compatible_item_data, safe= False)
+    return json_compatible_item_data
 
 @course_router.get("/domains")
 async def get_domains(domain_name: str, db: Session = Depends(get_db)):
