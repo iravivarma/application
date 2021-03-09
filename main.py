@@ -106,6 +106,8 @@ async def get_courses_by_name_category(category_name: str, db: Session = Depends
     
 	"""
 	category_courses = crud.get_courses_by_category_name(db,category_name)
+	for cat_course in category_courses:
+	    print(cat_course)
 	return category_courses
 
 @course_router.get('/{domain_name}/categories')
