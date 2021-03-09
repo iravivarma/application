@@ -210,7 +210,7 @@ def get_feed_by_course(db: Session, course_name: str):
 	course_id = get_course(db, course_name).id
 	return db.query(models.Questions).filter(models.Questions.course_id == course_id).first()
 
-def upvoteFeedback(db: Session, course_name: str, questions: int):
+def upvoteFeedback(db: Session, course_name: str, questions: str):
 	print(questions)
 	course_id = get_course(db, course_name).id
 	print(course_id)
