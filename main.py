@@ -154,7 +154,7 @@ async def get_feedback_by_course(course_name: str, db: Session = Depends(get_db)
 
 
 @course_router.post('/{course_name}/{questions}/upvote')
-async def feedback_upvote(course_name: str, questions: int, db: Session= Depends(get_db)):
+async def feedback_upvote(course_name: str, questions: str, db: Session= Depends(get_db)):
 	feedbackUpvote= crud.upvoteFeedback(db, course_name, questions)
 	print(feedbackUpvotes)
 	return feedbackUpvote
