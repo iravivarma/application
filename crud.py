@@ -120,8 +120,8 @@ def createCourses(db:Session, category_id: int, user_id: int, courses: schemas.N
 	add, commit and refresh: add, commit and update the details what the user given in UI
 	'''
 	course_details = models.Courses(course_name= courses.course_name, course_source = courses.course_source, course_link = courses.course_link, description= courses.course_description,
-		course_type= courses.course_type, course_medium= courses.course_medium, level= courses.level, upvotes=0, categories_id= category_id,
-		created_by = user_id)
+		course_tags=[courses.course_type, courses.course_medium, courses.level],upvotes=0, categories_id= category_id,created_by=user_id)
+		#course_type= courses.course_type, course_medium= courses.course_medium, level= courses.level, created_by = user_id)
 	db.add(course_details)
 	db.commit()
 	db.refresh(course_details)
