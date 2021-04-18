@@ -7,6 +7,7 @@ import time, ast
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from typing import List
+from sqlalchemy.orm import load_only
 
 
 
@@ -82,6 +83,10 @@ async def get_domains(domain_name: str, db: Session = Depends(get_db)):
 async def all_domains(skip: int = 0, limit: int = 100, db: SessionLocal = Depends(get_db)):
 	return crud.get_all_domains(db, skip = skip, limit = limit)
 
+@course_router.get("/categorybase")
+async def all_categories(skip: int = 0, db: SessionLocal = Depends(get_db)):
+	return crud.get_all_categories(db, skip = skip)
+
 ####creating the Course requests######
 @course_router.post('/{category}/createcourse')
 async def create_course(category: str, course_name: schemas.NewCourses, db: Session = Depends(get_db)):
@@ -106,10 +111,11 @@ async def get_courses_by_name_category(category_name: str, db: Session = Depends
     
 	"""
 	category_courses = crud.get_courses_by_category_name(db,category_name)
-	for cat_course in category_courses:
-	    print(cat_course.course_tags)
-	    if isinstance(cat_course.course_tags, str):
-	        cat_course.course_tags = ast.literal_eval(cat_course.course_tags)
+	print(category_courses)
+	# for cat_course in category_courses:
+	#     print(cat_course.course_tags)
+	#     if isinstance(cat_course.course_tags, str):
+	#         cat_course.course_tags = ast.literal_eval(cat_course.course_tags)
 	return category_courses
 
 @course_router.get('/{domain_name}/categories')
@@ -120,7 +126,12 @@ async def get_categories_by_name_domain(domain_name: str, db: Session = Depends(
     
 	"""
 	domain_categories = crud.get_categories_by_domain_name(db, domain_name)
-	return domain_categories
+	category_names = [category[0] for category in domain_categories]
+	return category_names
+
+# @course_router.get('/{domain}/categories')
+# def getCategories_of_domain(domain : str, db:Session = Depends(get_db)):
+# 	return crud.categories_by_domains(db, domain)
 
 @course_router.post('/{course_name}/upvote')
 async def course_upvotes(course_name:str, db: Session = Depends(get_db)):
@@ -166,3 +177,18 @@ async def del_course_name(course_name: str, db: Session= Depends(get_db)):
 @course_router.post('questions/delete/{question_id}')
 async def dele_questions(question_id: int, db: Session=Depends(get_db)):
 	return crud.delete_questions(db, question_id = question_id)
+
+
+@course_router.post('/{domain_name}/{category_name}/courses')
+async def get_courses_by_filter(domain_name: str, category_name: str, filters: schemas.CourseFilters, db: Session=Depends(get_db)):
+
+	
+	print(domain_name, category_name)
+	domainID = crud.get_domain(db, domain_name).id
+	categoryID = crud.get_category(db, category_name).id
+	print(domainID, categoryID)
+
+	courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+	return courses
+
+

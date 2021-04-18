@@ -56,10 +56,15 @@ def get_domain(db: Session, domain_name: str):
 	return the query from Domain class in models.py and filter the
 	domain_name of the Domain class by comparing with the input paramter.
 	'''
-	return db.query(models.Domain).filter(models.Domain.domain_name == domain_name).first()
+	domain = db.query(models.Domain).filter(models.Domain.domain_name == domain_name).first()
+	print(domain.domain_name)
+	return domain
 
 def get_all_domains(db: Session, skip: int = 0, limit: int = 100):
 	return db.query(models.Domain).offset(skip).limit(limit).all()
+
+def get_all_categories(db: Session, skip: int = 0):
+	return db.query(models.Categories).offset(skip).all()
 
 def get_category(db: Session, category_name: str):
 	'''
@@ -135,7 +140,7 @@ def get_courses_by_category_name(db: Session, category_name: str):
 	then queries the Courses in Model classes if categories.id matches to the cat_id. If it is, returns all which it matches
 	"""
 	cat_id = get_category(db, category_name).id
-	return db.query(models.Courses).filter(models.Courses.categories_id == cat_id).all()
+	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name).filter(models.Courses.categories_id == cat_id).all()
 
 def get_categories_by_domain_name(db: Session, domain_name: str):
 	"""
@@ -145,7 +150,8 @@ def get_categories_by_domain_name(db: Session, domain_name: str):
 	then queries the Courses in Model classes if categories.domain_id matches to the domain_id. If it is, returns all which it matches
 	"""
 	domain_id = get_domain(db, domain_name).id
-	return db.query(models.Categories).filter(models.Categories.domain_id == domain_id).all()
+	print(domain_id)
+	return db.query(models.Categories).with_entities(Categories.name).filter(models.Categories.domain_id == domain_id).all()
 
 def upvote_course(db: Session, course_name: str):
 	"""
@@ -316,3 +322,52 @@ def delete_course(db: Session, course_name: str):
 	return status.HTTP_200_OK
 
 
+
+
+	# def categories_by_domains(db: Session, domain_name: str):
+	# 	# domain_id = get_domain(db, domain_name).id
+	# 	# print(domain_id)
+	# 	# categoriy_details = db.query(models.categories).filter(models.Categories.domain_id == domain_id).all()
+	# 	domain_id = get_domain(db, domain_name).id
+	# 	print(domain_id)
+	# 	return db.query(models.Categories).filter(models.Categories.domain_id == domain_id).all().with_entities(Categories.name)
+
+	# 	# categories = categoriy_details.name
+	# 	return categories
+
+
+
+def get_courses_by_filters(db: Session, domain_id:int, category_id: int, filters: schemas.CourseFilters):
+
+	tags = filters.__dict__
+	courses_list = {}
+	if tags['course_type'] is not None:
+		if tags['course_type'] != 'string':
+			course_type = tags['course_type']
+		else:
+			course_type = 'Docs,Video,Book'
+	else:
+		course_type = 'Docs,Video,Book'
+	print(course_type)
+	if tags['course_medium'] is not None:
+		if tags['course_medium'] != 'string':
+			course_medium = tags['course_medium']
+		else:
+			course_medium = 'Beginner,Intermediate,Advanced'
+	else:
+		course_medium = 'Beginner,Intermediate,Advanced'
+	print(course_medium)
+	if tags['course_mode'] is not None:
+		if tags['course_mode'] != 'string':
+			course_mode = tags['course_mode']
+		else:
+			course_mode = 'Free,Paid'
+	else:
+		course_mode = 'Free,Paid'
+	print(course_mode)
+
+	return tags
+
+# def search_bar(db:Session, word:schemas.Search_schema):
+# 	search_word = db.query(models.Categories).filter(models.Categories.name.like(word)).with_entities(Categories.name).all()
+# 	return search_word

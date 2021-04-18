@@ -99,8 +99,12 @@ class Questions(BaseModel):
 
 class feedback(Questions):
 	course_name: str 
+##############################For Filters############################################
 
-
+class CourseFilters(BaseModel):
+    course_type : Optional[str] =None#= 'Docs,Video,Book'
+    course_medium:Optional[str] =None#= 'Beginner,Intermediate,Advanced'
+    course_mode :Optional[str] = None #'Free,Paid'
 #####################For Authentication###############################
 
 
@@ -203,3 +207,7 @@ class SentPasscode:
         """
 
         self.passcode = passcode
+
+
+class Search_schema(BaseModel):
+    search_word = str
