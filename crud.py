@@ -7,7 +7,7 @@ from sqlalchemy import and_, or_, not_
 from sqlalchemy.orm import load_only
 import datetime
 from models import Users, Courses, Categories, Domain
-
+from sqlalchemy import or_
 
 
 def get_users(db: Session, skip: int = 0, limit: int = 100):
@@ -64,7 +64,7 @@ def get_all_domains(db: Session, skip: int = 0, limit: int = 100):
 	return db.query(models.Domain).offset(skip).limit(limit).all()
 
 def get_all_categories(db: Session, skip: int = 0):
-	return db.query(models.Categories).offset(skip).all()
+	return db.query(models.Categories).with_entities(models.Categories.name).offset(skip).all()
 
 def get_category(db: Session, category_name: str):
 	'''
@@ -343,31 +343,40 @@ def get_courses_by_filters(db: Session, domain_id:int, category_id: int, filters
 	courses_list = {}
 	if tags['course_type'] is not None:
 		if tags['course_type'] != 'string':
-			course_type = tags['course_type']
+			course_type = tags['course_type'].split(',')
 		else:
-			course_type = 'Docs,Video,Book'
+			course_type = 'Docs,Video,Book'.split(',')
+			print(course_type)
+
 	else:
-		course_type = 'Docs,Video,Book'
+		course_type = 'Docs,Video,Book'.split(',')
 	print(course_type)
+	db_queries = db.query(models.Courses).filter(models.Courses.categories_id == category_id)
+	for types in course_type:
+		db_queries=db_queries.filter(or_(types.in_(models.Courses.course_tags)))
+	db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+
+
+
 	if tags['course_medium'] is not None:
 		if tags['course_medium'] != 'string':
-			course_medium = tags['course_medium']
+			course_medium = tags['course_medium'].split(',')
 		else:
-			course_medium = 'Beginner,Intermediate,Advanced'
+			course_medium = 'Beginner,Intermediate,Advanced'.split(',')
 	else:
-		course_medium = 'Beginner,Intermediate,Advanced'
+		course_medium = 'Beginner,Intermediate,Advanced'.split(',')
 	print(course_medium)
 	if tags['course_mode'] is not None:
 		if tags['course_mode'] != 'string':
-			course_mode = tags['course_mode']
+			course_mode = tags['course_mode'].split(',')
 		else:
-			course_mode = 'Free,Paid'
+			course_mode = 'Free,Paid'.split(',')
 	else:
-		course_mode = 'Free,Paid'
+		course_mode = 'Free,Paid'.split(',')
 	print(course_mode)
 
-	return tags
+	return db_queries
 
 # def search_bar(db:Session, word:schemas.Search_schema):
 # 	search_word = db.query(models.Categories).filter(models.Categories.name.like(word)).with_entities(Categories.name).all()
-# 	return search_word
+# 	return search_wor

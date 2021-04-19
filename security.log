@@ -2595,3 +2595,1320 @@ AttributeError: 'list' object has no attribute 'name'
 2021-04-18 21:18:08.465 INFO main - serve: Finished server process [10976]
 2021-04-18 21:18:08.544 ERROR basereload - signal_handler: Could not stop child process 10976: [WinError 5] Access is denied
 2021-04-18 21:18:08.550 INFO basereload - shutdown: Stopping reloader process [12512]
+2021-04-18 21:39:09.036 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-18 21:39:09.038 INFO basereload - startup: Started reloader process [1876] using statreload
+2021-04-18 21:39:10.850 INFO main - serve: Started server process [5156]
+2021-04-18 21:39:10.851 INFO on - startup: Waiting for application startup.
+2021-04-18 21:39:10.853 INFO on - startup: Application startup complete.
+2021-04-18 21:59:59.911 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 22:00:24.097 INFO main - serve: Started server process [15768]
+2021-04-18 22:00:24.097 INFO on - startup: Waiting for application startup.
+2021-04-18 22:00:24.098 INFO on - startup: Application startup complete.
+2021-04-18 22:00:48.746 INFO main - shutdown: Shutting down
+2021-04-18 22:00:48.808 ERROR basereload - signal_handler: Could not stop child process 15768: [Errno 10] No child processes
+2021-04-18 22:00:48.819 INFO basereload - shutdown: Stopping reloader process [1876]
+2021-04-18 22:00:51.953 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-18 22:00:51.954 INFO basereload - startup: Started reloader process [15172] using statreload
+2021-04-18 22:00:53.536 INFO main - serve: Started server process [17620]
+2021-04-18 22:00:53.537 INFO on - startup: Waiting for application startup.
+2021-04-18 22:00:53.538 INFO on - startup: Application startup complete.
+2021-04-18 22:03:41.826 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 22:03:53.084 INFO main - serve: Started server process [18348]
+2021-04-18 22:03:53.085 INFO on - startup: Waiting for application startup.
+2021-04-18 22:03:53.085 INFO on - startup: Application startup complete.
+2021-04-18 22:03:57.320 INFO main - shutdown: Shutting down
+2021-04-18 22:03:57.429 INFO on - shutdown: Waiting for application shutdown.
+2021-04-18 22:03:57.430 INFO on - shutdown: Application shutdown complete.
+2021-04-18 22:03:57.430 INFO main - serve: Finished server process [18348]
+2021-04-18 22:03:57.445 ERROR basereload - signal_handler: Could not stop child process 18348: [Errno 10] No child processes
+2021-04-18 22:03:57.457 INFO basereload - shutdown: Stopping reloader process [15172]
+2021-04-18 22:04:00.620 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-18 22:04:00.621 INFO basereload - startup: Started reloader process [20372] using statreload
+2021-04-18 22:04:02.162 INFO main - serve: Started server process [3164]
+2021-04-18 22:04:02.163 INFO on - startup: Waiting for application startup.
+2021-04-18 22:04:02.165 INFO on - startup: Application startup complete.
+2021-04-18 22:16:40.424 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 22:16:54.875 INFO main - serve: Started server process [17348]
+2021-04-18 22:16:54.876 INFO on - startup: Waiting for application startup.
+2021-04-18 22:16:54.878 INFO on - startup: Application startup complete.
+2021-04-18 22:16:59.450 INFO main - shutdown: Shutting down
+2021-04-18 22:16:59.559 INFO on - shutdown: Waiting for application shutdown.
+2021-04-18 22:16:59.559 INFO on - shutdown: Application shutdown complete.
+2021-04-18 22:16:59.561 INFO main - serve: Finished server process [17348]
+2021-04-18 22:16:59.639 ERROR basereload - signal_handler: Could not stop child process 17348: [Errno 10] No child processes
+2021-04-18 22:16:59.649 INFO basereload - shutdown: Stopping reloader process [20372]
+2021-04-18 22:17:02.404 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-18 22:17:02.405 INFO basereload - startup: Started reloader process [4004] using statreload
+2021-04-18 22:17:03.979 INFO main - serve: Started server process [21640]
+2021-04-18 22:17:03.980 INFO on - startup: Waiting for application startup.
+2021-04-18 22:17:03.983 INFO on - startup: Application startup complete.
+2021-04-18 22:19:19.161 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 22:19:20.999 INFO main - serve: Started server process [13036]
+2021-04-18 22:19:20.999 INFO on - startup: Waiting for application startup.
+2021-04-18 22:19:21.000 INFO on - startup: Application startup complete.
+2021-04-18 22:19:26.138 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 22:19:27.669 INFO main - serve: Started server process [12024]
+2021-04-18 22:19:27.670 INFO on - startup: Waiting for application startup.
+2021-04-18 22:19:27.671 INFO on - startup: Application startup complete.
+2021-04-18 22:22:21.416 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 22:22:22.962 INFO main - serve: Started server process [20856]
+2021-04-18 22:22:22.963 INFO on - startup: Waiting for application startup.
+2021-04-18 22:22:22.964 INFO on - startup: Application startup complete.
+2021-04-18 23:24:42.917 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:24:44.485 INFO main - serve: Started server process [21704]
+2021-04-18 23:24:44.486 INFO on - startup: Waiting for application startup.
+2021-04-18 23:24:44.488 INFO on - startup: Application startup complete.
+2021-04-18 23:24:58.822 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:25:00.364 INFO main - serve: Started server process [12652]
+2021-04-18 23:25:00.365 INFO on - startup: Waiting for application startup.
+2021-04-18 23:25:00.367 INFO on - startup: Application startup complete.
+2021-04-18 23:25:45.743 INFO main - shutdown: Shutting down
+2021-04-18 23:25:45.821 ERROR basereload - signal_handler: Could not stop child process 12652: [Errno 10] No child processes
+2021-04-18 23:25:45.831 INFO basereload - shutdown: Stopping reloader process [4004]
+2021-04-18 23:25:48.520 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-18 23:25:48.521 INFO basereload - startup: Started reloader process [7528] using statreload
+2021-04-18 23:25:50.190 INFO main - serve: Started server process [216]
+2021-04-18 23:25:50.191 INFO on - startup: Waiting for application startup.
+2021-04-18 23:25:50.192 INFO on - startup: Application startup complete.
+2021-04-18 23:26:23.531 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 187, in get_courses_by_filter
+    domainID = crud.get_domain(db, domain_name).id
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 60, in get_domain
+    print(domain.domain_name)
+AttributeError: 'NoneType' object has no attribute 'domain_name'
+2021-04-18 23:26:45.993 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 187, in get_courses_by_filter
+    domainID = crud.get_domain(db, domain_name).id
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 60, in get_domain
+    print(domain.domain_name)
+AttributeError: 'NoneType' object has no attribute 'domain_name'
+2021-04-18 23:26:57.579 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 356, in get_courses_by_filters
+    db_queries=db_queries.filter(_or(models.Courses.course_tags.like('%'+ type + '%')))
+NameError: name '_or' is not defined
+2021-04-18 23:27:53.992 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:27:55.630 INFO main - serve: Started server process [3748]
+2021-04-18 23:27:55.631 INFO on - startup: Waiting for application startup.
+2021-04-18 23:27:55.632 INFO on - startup: Application startup complete.
+2021-04-18 23:28:03.613 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 356, in get_courses_by_filters
+    db_queries=db_queries.filter(_or(models.Courses.course_tags.like('%'+ type + '%')))
+NameError: name '_or' is not defined
+2021-04-18 23:28:25.329 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:28:26.980 INFO main - serve: Started server process [11260]
+2021-04-18 23:28:26.980 INFO on - startup: Waiting for application startup.
+2021-04-18 23:28:26.981 INFO on - startup: Application startup complete.
+2021-04-18 23:28:31.364 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 357, in get_courses_by_filters
+    db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3373, in all
+    return list(self)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedFunction) operator does not exist: json ~~ unknown
+LINE 3: ...ourses.categories_id = 65 AND courses.course_tags LIKE '%Doc...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+[SQL: SELECT courses.course_name AS courses_course_name, courses.id AS courses_id, courses.course_tags AS courses_course_tags 
+FROM courses 
+WHERE courses.categories_id = %(categories_id_1)s AND courses.course_tags LIKE %(course_tags_1)s]
+[parameters: {'categories_id_1': 65, 'course_tags_1': '%Docs%'}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-18 23:29:33.944 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 357, in get_courses_by_filters
+    db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3373, in all
+    return list(self)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedFunction) operator does not exist: json ~~ unknown
+LINE 3: ...ourses.categories_id = 65 AND courses.course_tags LIKE '%Vid...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+[SQL: SELECT courses.course_name AS courses_course_name, courses.id AS courses_id, courses.course_tags AS courses_course_tags 
+FROM courses 
+WHERE courses.categories_id = %(categories_id_1)s AND courses.course_tags LIKE %(course_tags_1)s]
+[parameters: {'categories_id_1': 65, 'course_tags_1': '%Video%'}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-18 23:31:14.076 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 357, in get_courses_by_filters
+    db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3373, in all
+    return list(self)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedFunction) operator does not exist: json ~~ unknown
+LINE 3: ...ourses.categories_id = 65 AND courses.course_tags LIKE '%Boo...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+[SQL: SELECT courses.course_name AS courses_course_name, courses.id AS courses_id, courses.course_tags AS courses_course_tags 
+FROM courses 
+WHERE courses.categories_id = %(categories_id_1)s AND courses.course_tags LIKE %(course_tags_1)s]
+[parameters: {'categories_id_1': 65, 'course_tags_1': '%Book%'}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-18 23:34:01.649 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:34:03.146 INFO main - serve: Started server process [1376]
+2021-04-18 23:34:03.147 INFO on - startup: Waiting for application startup.
+2021-04-18 23:34:03.149 INFO on - startup: Application startup complete.
+2021-04-18 23:34:10.983 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 357, in get_courses_by_filters
+    db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3373, in all
+    return list(self)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedFunction) operator does not exist: json ~~ unknown
+LINE 3: ...ourses.categories_id = 65 AND courses.course_tags LIKE '%Boo...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+[SQL: SELECT courses.course_name AS courses_course_name, courses.id AS courses_id, courses.course_tags AS courses_course_tags 
+FROM courses 
+WHERE courses.categories_id = %(categories_id_1)s AND courses.course_tags LIKE %(course_tags_1)s]
+[parameters: {'categories_id_1': 65, 'course_tags_1': '%Book%'}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-18 23:36:28.652 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:37:11.452 ERROR basereload - signal_handler: Could not stop child process 16356: [WinError 5] Access is denied
+2021-04-18 23:37:11.461 INFO basereload - shutdown: Stopping reloader process [7528]
+2021-04-18 23:37:41.041 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-18 23:37:41.042 INFO basereload - startup: Started reloader process [22428] using statreload
+2021-04-18 23:37:42.523 INFO main - serve: Started server process [24728]
+2021-04-18 23:37:42.525 INFO on - startup: Waiting for application startup.
+2021-04-18 23:37:42.527 INFO on - startup: Application startup complete.
+2021-04-18 23:37:50.385 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 357, in get_courses_by_filters
+    db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3373, in all
+    return list(self)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DataError: (psycopg2.errors.InvalidTextRepresentation) invalid input syntax for type json
+LINE 3: ...es.categories_id = 65 AND courses.course_tags IN ('B', 'o', ...
+                                                             ^
+DETAIL:  Token "B" is invalid.
+CONTEXT:  JSON data, line 1: B
+
+[SQL: SELECT courses.course_name AS courses_course_name, courses.id AS courses_id, courses.course_tags AS courses_course_tags 
+FROM courses 
+WHERE courses.categories_id = %(categories_id_1)s AND courses.course_tags IN (%(course_tags_1)s, %(course_tags_2)s, %(course_tags_3)s, %(course_tags_4)s)]
+[parameters: {'categories_id_1': 65, 'course_tags_1': 'B', 'course_tags_2': 'o', 'course_tags_3': 'o', 'course_tags_4': 'k'}]
+(Background on this error at: http://sqlalche.me/e/13/9h9h)
+2021-04-18 23:38:49.130 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:38:51.115 INFO main - serve: Started server process [4024]
+2021-04-18 23:38:51.115 INFO on - startup: Waiting for application startup.
+2021-04-18 23:38:51.116 INFO on - startup: Application startup complete.
+2021-04-18 23:39:33.458 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:39:35.246 INFO main - serve: Started server process [1332]
+2021-04-18 23:39:35.246 INFO on - startup: Waiting for application startup.
+2021-04-18 23:39:35.249 INFO on - startup: Application startup complete.
+2021-04-18 23:39:40.514 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 357, in get_courses_by_filters
+    db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3373, in all
+    return list(self)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedFunction) operator does not exist: json = unknown
+LINE 3: ...ourses.categories_id = 65 AND courses.course_tags IN ('Book'...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+[SQL: SELECT courses.course_name AS courses_course_name, courses.id AS courses_id, courses.course_tags AS courses_course_tags 
+FROM courses 
+WHERE courses.categories_id = %(categories_id_1)s AND courses.course_tags IN (%(course_tags_1)s)]
+[parameters: {'categories_id_1': 65, 'course_tags_1': 'Book'}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-18 23:41:12.291 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:41:14.129 INFO main - serve: Started server process [13552]
+2021-04-18 23:41:14.130 INFO on - startup: Waiting for application startup.
+2021-04-18 23:41:14.132 INFO on - startup: Application startup complete.
+2021-04-18 23:41:20.321 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 356, in get_courses_by_filters
+    db_queries=db_queries.filter(or_([types].in_(models.Courses.course_tags)))
+AttributeError: 'list' object has no attribute 'in_'
+2021-04-18 23:41:40.472 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-18 23:41:42.225 INFO main - serve: Started server process [23876]
+2021-04-18 23:41:42.225 INFO on - startup: Waiting for application startup.
+2021-04-18 23:41:42.227 INFO on - startup: Application startup complete.
+2021-04-18 23:41:46.125 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 191, in get_courses_by_filter
+    courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 356, in get_courses_by_filters
+    db_queries=db_queries.filter(or_(types.in_(models.Courses.course_tags)))
+AttributeError: 'str' object has no attribute 'in_'
+2021-04-19 22:33:20.824 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-04-19 22:33:23.935 INFO main - serve: Started server process [24272]
+2021-04-19 22:33:23.937 INFO on - startup: Waiting for application startup.
+2021-04-19 22:33:23.942 INFO on - startup: Application startup complete.
+2021-04-19 22:37:52.742 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-19 22:37:54.330 INFO main - serve: Started server process [23776]
+2021-04-19 22:37:54.331 INFO on - startup: Waiting for application startup.
+2021-04-19 22:37:54.332 INFO on - startup: Application startup complete.
+2021-04-19 22:39:14.446 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 142, in course_upvotes
+    courseupvote = crud.upvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 166, in upvote_course
+    course_id = get_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 91, in get_course
+    course_details=db.query(models.Courses).filter(models.Courses.course_name == course_name).first()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column courses.downvotes does not exist
+LINE 1: ...ourses_views, courses.upvotes AS courses_upvotes, courses.do...
+                                                             ^
+
+[SQL: SELECT courses.id AS courses_id, courses.categories_id AS courses_categories_id, courses.created_by AS courses_created_by, courses.course_name AS courses_course_name, courses.course_source AS courses_course_source, courses.course_link AS courses_course_link, courses.description AS courses_description, courses.course_tags AS courses_course_tags, courses.views AS courses_views, courses.upvotes AS courses_upvotes, courses.downvotes AS courses_downvotes 
+FROM courses 
+WHERE courses.course_name = %(course_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'course_name_1': 'DevOps Online Training ', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-19 22:40:53.337 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-04-19 22:40:54.984 INFO main - serve: Started server process [26936]
+2021-04-19 22:40:54.988 INFO on - startup: Waiting for application startup.
+2021-04-19 22:40:54.994 INFO on - startup: Application startup complete.
+2021-04-19 22:41:25.312 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 142, in course_upvotes
+    courseupvote = crud.upvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 167, in upvote_course
+    course=course_id.__dict__
+AttributeError: 'NoneType' object has no attribute '__dict__'
+2021-04-19 22:44:28.963 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 151, in course_downvote
+    coursedownvote = crud.downvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 189, in downvote_course
+    courseDownvote= course['downvotes']
+KeyError: 'downvotes'
+2021-04-19 22:45:44.448 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-04-19 22:45:53.253 INFO main - serve: Started server process [24596]
+2021-04-19 22:45:53.254 INFO on - startup: Waiting for application startup.
+2021-04-19 22:45:53.255 INFO on - startup: Application startup complete.
+2021-04-19 22:45:59.184 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 151, in course_downvote
+    coursedownvote = crud.downvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 186, in downvote_course
+    course_id = get_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 91, in get_course
+    course_details=db.query(models.Courses).filter(models.Courses.course_name == course_name).first()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column courses.downvotes does not exist
+LINE 1: ...ourses_views, courses.upvotes AS courses_upvotes, courses.do...
+                                                             ^
+
+[SQL: SELECT courses.id AS courses_id, courses.categories_id AS courses_categories_id, courses.created_by AS courses_created_by, courses.course_name AS courses_course_name, courses.course_source AS courses_course_source, courses.course_link AS courses_course_link, courses.description AS courses_description, courses.course_tags AS courses_course_tags, courses.views AS courses_views, courses.upvotes AS courses_upvotes, courses.downvotes AS courses_downvotes 
+FROM courses 
+WHERE courses.course_name = %(course_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'course_name_1': 'Become a Cloud Developer', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-19 22:46:08.232 INFO main - shutdown: Shutting down
+2021-04-19 22:46:08.240 ERROR basereload - signal_handler: Could not stop child process 24596: [Errno 10] No child processes
+2021-04-19 22:46:08.251 INFO basereload - shutdown: Stopping reloader process [22428]
+2021-04-19 22:46:11.263 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-19 22:46:11.264 INFO basereload - startup: Started reloader process [22160] using statreload
+2021-04-19 22:46:12.906 INFO main - serve: Started server process [19264]
+2021-04-19 22:46:12.907 INFO on - startup: Waiting for application startup.
+2021-04-19 22:46:12.908 INFO on - startup: Application startup complete.
+2021-04-19 22:46:34.467 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 151, in course_downvote
+    coursedownvote = crud.downvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 186, in downvote_course
+    course_id = get_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 91, in get_course
+    course_details=db.query(models.Courses).filter(models.Courses.course_name == course_name).first()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column courses.downvotes does not exist
+LINE 1: ...ourses_views, courses.upvotes AS courses_upvotes, courses.do...
+                                                             ^
+
+[SQL: SELECT courses.id AS courses_id, courses.categories_id AS courses_categories_id, courses.created_by AS courses_created_by, courses.course_name AS courses_course_name, courses.course_source AS courses_course_source, courses.course_link AS courses_course_link, courses.description AS courses_description, courses.course_tags AS courses_course_tags, courses.views AS courses_views, courses.upvotes AS courses_upvotes, courses.downvotes AS courses_downvotes 
+FROM courses 
+WHERE courses.course_name = %(course_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'course_name_1': "Apache Spark in Python: Beginner's Guide", 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-19 22:47:05.499 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 142, in course_upvotes
+    courseupvote = crud.upvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 166, in upvote_course
+    course_id = get_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 91, in get_course
+    course_details=db.query(models.Courses).filter(models.Courses.course_name == course_name).first()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column courses.downvotes does not exist
+LINE 1: ...ourses_views, courses.upvotes AS courses_upvotes, courses.do...
+                                                             ^
+
+[SQL: SELECT courses.id AS courses_id, courses.categories_id AS courses_categories_id, courses.created_by AS courses_created_by, courses.course_name AS courses_course_name, courses.course_source AS courses_course_source, courses.course_link AS courses_course_link, courses.description AS courses_description, courses.course_tags AS courses_course_tags, courses.views AS courses_views, courses.upvotes AS courses_upvotes, courses.downvotes AS courses_downvotes 
+FROM courses 
+WHERE courses.course_name = %(course_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'course_name_1': 'Become a Cloud Developer', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-19 22:47:16.662 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 142, in course_upvotes
+    courseupvote = crud.upvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 166, in upvote_course
+    course_id = get_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 91, in get_course
+    course_details=db.query(models.Courses).filter(models.Courses.course_name == course_name).first()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column courses.downvotes does not exist
+LINE 1: ...ourses_views, courses.upvotes AS courses_upvotes, courses.do...
+                                                             ^
+
+[SQL: SELECT courses.id AS courses_id, courses.categories_id AS courses_categories_id, courses.created_by AS courses_created_by, courses.course_name AS courses_course_name, courses.course_source AS courses_course_source, courses.course_link AS courses_course_link, courses.description AS courses_description, courses.course_tags AS courses_course_tags, courses.views AS courses_views, courses.upvotes AS courses_upvotes, courses.downvotes AS courses_downvotes 
+FROM courses 
+WHERE courses.course_name = %(course_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'course_name_1': 'Become a Cloud Developer', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-19 22:48:59.622 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-04-19 22:49:01.299 INFO main - serve: Started server process [8356]
+2021-04-19 22:49:01.300 INFO on - startup: Waiting for application startup.
+2021-04-19 22:49:01.303 INFO on - startup: Application startup complete.
+2021-04-19 22:52:44.155 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-04-19 22:52:45.756 INFO main - serve: Started server process [11588]
+2021-04-19 22:52:45.757 INFO on - startup: Waiting for application startup.
+2021-04-19 22:52:45.758 INFO on - startup: Application startup complete.
+2021-04-19 22:52:58.987 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 142, in course_upvotes
+    courseupvote = crud.upvote_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 166, in upvote_course
+    course_id = get_course(db, course_name)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 91, in get_course
+    course_details=db.query(models.Courses).filter(models.Courses.course_name == course_name).first()
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3429, in first
+    ret = list(self[0:1])
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3203, in __getitem__
+    return list(res)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3535, in __iter__
+    return self._execute_and_instances(context)
+  File "E:\applications\lib\site-packages\sqlalchemy\orm\query.py", line 3560, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "E:\applications\lib\site-packages\sqlalchemy\util\compat.py", line 182, in raise_
+    raise exception
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "E:\applications\lib\site-packages\sqlalchemy\engine\default.py", line 609, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column courses.downvotes does not exist
+LINE 1: ...ourses_views, courses.upvotes AS courses_upvotes, courses.do...
+                                                             ^
+
+[SQL: SELECT courses.id AS courses_id, courses.categories_id AS courses_categories_id, courses.created_by AS courses_created_by, courses.course_name AS courses_course_name, courses.course_source AS courses_course_source, courses.course_link AS courses_course_link, courses.description AS courses_description, courses.course_tags AS courses_course_tags, courses.views AS courses_views, courses.upvotes AS courses_upvotes, courses.downvotes AS courses_downvotes 
+FROM courses 
+WHERE courses.course_name = %(course_name_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'course_name_1': 'Become a Cloud Developer', 'param_1': 1}]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+2021-04-19 23:05:42.245 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-19 23:05:43.852 INFO main - serve: Started server process [25328]
+2021-04-19 23:05:43.853 INFO on - startup: Waiting for application startup.
+2021-04-19 23:05:43.856 INFO on - startup: Application startup complete.
+2021-04-19 23:06:34.248 ERROR basereload - signal_handler: Could not stop child process 25328: [WinError 5] Access is denied
+2021-04-19 23:06:34.257 INFO basereload - shutdown: Stopping reloader process [22160]
+2021-04-19 23:07:42.984 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-19 23:07:42.985 INFO basereload - startup: Started reloader process [24484] using statreload
+2021-04-19 23:07:44.540 INFO main - serve: Started server process [16044]
+2021-04-19 23:07:44.541 INFO on - startup: Waiting for application startup.
+2021-04-19 23:07:44.543 INFO on - startup: Application startup complete.
+2021-04-19 23:08:54.976 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-19 23:09:03.699 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-19 23:09:03.700 INFO basereload - startup: Started reloader process [25692] using statreload
+2021-04-19 23:09:05.302 INFO main - serve: Started server process [25744]
+2021-04-19 23:09:05.303 INFO on - startup: Waiting for application startup.
+2021-04-19 23:09:05.305 INFO on - startup: Application startup complete.
+2021-04-19 23:09:26.426 ERROR basereload - signal_handler: Could not stop child process 25744: [WinError 5] Access is denied
+2021-04-19 23:09:26.437 INFO basereload - shutdown: Stopping reloader process [25692]
+2021-04-19 23:10:48.378 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-19 23:10:48.379 INFO basereload - startup: Started reloader process [19764] using statreload
+2021-04-19 23:10:49.884 INFO main - serve: Started server process [14840]
+2021-04-19 23:10:49.885 INFO on - startup: Waiting for application startup.
+2021-04-19 23:10:49.886 INFO on - startup: Application startup complete.
+2021-04-19 23:16:43.781 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-19 23:16:45.410 INFO main - serve: Started server process [23752]
+2021-04-19 23:16:45.411 INFO on - startup: Waiting for application startup.
+2021-04-19 23:16:45.413 INFO on - startup: Application startup complete.
+2021-04-19 23:17:44.344 WARNING statreload - should_restart: Detected file change in 'pilot.py'. Reloading...
+2021-04-19 23:17:45.961 INFO main - serve: Started server process [21972]
+2021-04-19 23:17:45.961 INFO on - startup: Waiting for application startup.
+2021-04-19 23:17:45.963 INFO on - startup: Application startup complete.
+2021-04-19 23:17:59.726 WARNING statreload - should_restart: Detected file change in 'database.py'. Reloading...
+2021-04-19 23:18:11.413 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-04-19 23:18:24.942 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-04-19 23:18:32.939 ERROR basereload - signal_handler: Could not stop child process 19564: [WinError 5] Access is denied
+2021-04-19 23:18:32.949 INFO basereload - shutdown: Stopping reloader process [19764]

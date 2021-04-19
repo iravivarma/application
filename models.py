@@ -67,6 +67,8 @@ class Courses(Base):
 	#level = Column(String)######give datatype Level
 	views = Column(Integer, default = 0)
 	upvotes = Column(Integer, default = 0)
+	downvotes = Column(Integer, default = 0)
+
 
 	course_cat = relationship("Categories", back_populates="cat_courses")
 	course_users = relationship("Users", back_populates="user_course")

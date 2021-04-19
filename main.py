@@ -85,7 +85,9 @@ async def all_domains(skip: int = 0, limit: int = 100, db: SessionLocal = Depend
 
 @course_router.get("/categorybase")
 async def all_categories(skip: int = 0, db: SessionLocal = Depends(get_db)):
-	return crud.get_all_categories(db, skip = skip)
+	result =  crud.get_all_categories(db, skip = skip)
+	category_names = [category[0] for category in result]
+	return category_names
 
 ####creating the Course requests######
 @course_router.post('/{category}/createcourse')
