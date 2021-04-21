@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# SQLALCHEMY_DATABASE_URL = "postgresql://postgres:qwerty@localhost:5432/course_website"
+#SQLALCHEMY_DATABASE_URL = "postgresql://postgres:qwerty@localhost:5432/course_website"
 SQLALCHEMY_DATABASE_URL = "postgres://tugrefnkrtbjvk:7d4c031048e0e5908f90135605bda7964d85c37a1f87a5f04871dbe2d9a19af3@ec2-54-237-143-127.compute-1.amazonaws.com:5432/das7sc8jfhka1q"
 
 engine = create_engine(
@@ -50,6 +50,7 @@ class Categories(Base):
 
 	domain_type = relationship("Domain", back_populates="cat_type")
 	cat_courses = relationship("Courses", back_populates="course_cat")
+	cat_ids = relationship("filters", back_populates = "courseFilters")
 
 
 
@@ -73,6 +74,21 @@ class Courses(Base):
 	course_cat = relationship("Categories", back_populates="cat_courses")
 	course_users = relationship("Users", back_populates="user_course")
 	courses_feed = relationship("Questions", back_populates = "feed_on_courses")
+	course_filter = relationship("filters", back_populates = "course_filters")
+
+
+class filters(Base):
+	__tablename__ = "filter_tags"
+	id = Column(Integer, primary_key=True, index = True)
+	course_id = Column(Integer, ForeignKey("courses.id"))
+	category_id = Column(Integer, ForeignKey("categories.id"))
+	category=Column(String) #course_medium, Course_level, Course_mode
+	c_type= Column(String)#[pdf, book, video], [beginner, intermediate, Advanced], [free,paid]
+
+
+	course_filters = relationship("Courses", back_populates = "course_filter")
+	courseFilters = relationship("Categories", back_populates ="cat_ids" )
+
 
 
 class Questions(Base):
@@ -96,8 +112,9 @@ class Questions(Base):
     
 
 
-# Users.__table__.create(bind=engine, checkfirst=True)
-# Domain.__table__.create(bind=engine, checkfirst=True)
-# Categories.__table__.create(bind=engine, checkfirst=True)
-# Courses.__table__.create(bind=engine, checkfirst=True)
-# Questions.__table__.create(bind=engine, checkfirst=True)
+Users.__table__.create(bind=engine, checkfirst=True)
+Domain.__table__.create(bind=engine, checkfirst=True)
+Categories.__table__.create(bind=engine, checkfirst=True)
+Courses.__table__.create(bind=engine, checkfirst=True)
+Questions.__table__.create(bind=engine, checkfirst=True)
+filters.__table__.create(bind = engine, checkfirst = True)

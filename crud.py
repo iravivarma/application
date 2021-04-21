@@ -8,6 +8,7 @@ from sqlalchemy.orm import load_only
 import datetime
 from models import Users, Courses, Categories, Domain
 from sqlalchemy import or_
+import time
 
 
 def get_users(db: Session, skip: int = 0, limit: int = 100):
@@ -172,6 +173,13 @@ def upvote_course(db: Session, course_name: str):
 	course_upvote = db.query(models.Courses).filter(models.Courses.id == course_id.id).update({'upvotes': courseUpvote + 1})
 	db.commit()
 	return course_upvote
+
+def get_upvotes(db:Session, course_name: str):
+	course_id = get_course(db,course_name)
+	
+	course_upvotes = db.query(models.Courses).filter(models.Courses.id == course_id.id).with_entities(Courses.upvotes).first()
+	return course_upvotes
+
 	
 def downvote_course(db: Session, course_name: str):
 	"""
@@ -192,7 +200,12 @@ def downvote_course(db: Session, course_name: str):
 	course_down_vote = db.query(models.Courses).filter(models.Courses.id == course_id.id).update({'downvotes': courseDownvote - 1})
 	db.commit()
 	return course_down_vote
-	
+
+def get_downvotes(db: Session,course_name:str):
+	course_id = get_course(db, course_name)
+	course_downvotes=db.query(models.Courses).filter(models.Courses.id == course_id.id).with_entities(Courses.downvotes).first()
+	return course_downvotes
+
 def create_course_feedback(db: Session, course_id: int, feed: schemas.Questions):
 	'''
 	Input is feed: from Question class in schemas.py(validation model)
@@ -337,46 +350,78 @@ def delete_course(db: Session, course_name: str):
 
 
 
-def get_courses_by_filters(db: Session, domain_id:int, category_id: int, filters: schemas.CourseFilters):
+# def get_courses_by_filters(db: Session, domain_id:int, category_id: int, filters: schemas.CourseFilters):
 
-	tags = filters.__dict__
-	courses_list = {}
-	if tags['course_type'] is not None:
-		if tags['course_type'] != 'string':
-			course_type = tags['course_type'].split(',')
-		else:
-			course_type = 'Docs,Video,Book'.split(',')
-			print(course_type)
+# 	tags = filters.__dict__
+# 	courses_list = {}
+# 	if tags['course_type'] is not None:
+# 		if tags['course_type'] != 'string':
+# 			course_type = tags['course_type'].split(',')
+# 		else:
+# 			course_type = 'Docs,Video,Book'.split(',')
+# 			print(course_type)
 
-	else:
-		course_type = 'Docs,Video,Book'.split(',')
-	print(course_type)
-	db_queries = db.query(models.Courses).filter(models.Courses.categories_id == category_id)
-	for types in course_type:
-		db_queries=db_queries.filter(or_(types.in_(models.Courses.course_tags)))
-	db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
+# 	else:
+# 		course_type = 'Docs,Video,Book'.split(',')
+# 	print(course_type)
+# 	db_queries = db.query(models.Courses).filter(models.Courses.categories_id == category_id)
+# 	for types in course_type:
+# 		db_queries=db_queries.filter(or_(types.in_(models.Courses.course_tags)))
+# 	db_queries = db_queries.with_entities(Courses.course_name, Courses.id, Courses.course_tags).all()
 
 
 
-	if tags['course_medium'] is not None:
-		if tags['course_medium'] != 'string':
-			course_medium = tags['course_medium'].split(',')
-		else:
-			course_medium = 'Beginner,Intermediate,Advanced'.split(',')
-	else:
-		course_medium = 'Beginner,Intermediate,Advanced'.split(',')
-	print(course_medium)
-	if tags['course_mode'] is not None:
-		if tags['course_mode'] != 'string':
-			course_mode = tags['course_mode'].split(',')
-		else:
-			course_mode = 'Free,Paid'.split(',')
-	else:
-		course_mode = 'Free,Paid'.split(',')
-	print(course_mode)
+# 	if tags['course_medium'] is not None:
+# 		if tags['course_medium'] != 'string':
+# 			course_medium = tags['course_medium'].split(',')
+# 		else:
+# 			course_medium = 'Beginner,Intermediate,Advanced'.split(',')
+# 	else:
+# 		course_medium = 'Beginner,Intermediate,Advanced'.split(',')
+# 	print(course_medium)
+# 	if tags['course_mode'] is not None:
+# 		if tags['course_mode'] != 'string':
+# 			course_mode = tags['course_mode'].split(',')
+# 		else:
+# 			course_mode = 'Free,Paid'.split(',')
+# 	else:
+# 		course_mode = 'Free,Paid'.split(',')
+# 	print(course_mode)
 
-	return db_queries
+# 	return db_queries
 
 # def search_bar(db:Session, word:schemas.Search_schema):
 # 	search_word = db.query(models.Categories).filter(models.Categories.name.like(word)).with_entities(Categories.name).all()
 # 	return search_wor
+
+def get_course_by_filter(db: Session, domain_name:str, category_name:str, tag_filters: schemas.CourseFilters):
+
+	tags = tag_filters.__dict__
+	tag_keys = tags.values()
+	filter_tags = list(tag_keys)
+	print(filter_tags)
+
+	f_tags = []
+	for tag in filter_tags:
+		split_tag = tag.split(',')
+		f_tags.extend(split_tag)
+
+	print(f_tags)
+	domain_id = get_domain(db, domain_name).id
+	category_id = get_category(db, category_name).id
+
+	start = time.time()
+	#models.Courses.id == models.filters.course_id  ,
+	result = db.query(models.filters).join(models.Courses).filter( and_(models.filters.category_id == category_id, models.filters.c_type.in_(f_tags))).distinct(models.filters.course_id).with_entities(models.filters.course_id, models.Courses.course_name, models.Courses.course_tags).all()
+	# result = db.query(models.filters).filter(models.filters.category_id == category_id)
+	# result = result.filter( models.filters.c_type.in_(f_tags))
+	# # for tag in f_tags:
+	# # 	print(tag)
+	# # 	result = result.filter(models.filters.c_type == tag)
+
+	# result = result.with_entities(models.filters.course_id).all()
+	print(result)
+	end = time.time()-start
+	print(end)
+
+	return result

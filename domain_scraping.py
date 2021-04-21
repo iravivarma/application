@@ -47,6 +47,7 @@ for domains in domain_links:
     domain=[]
     
     domain_text = domains.split('/')[-1]
+    print(domain_text)
     # domain.append(domain_text)
     # print(domain)
     # if 'domain' in domain_name.keys():
@@ -69,7 +70,7 @@ for domains in domain_links:
 
             
     df = pd.DataFrame(cat_names)
-    df.to_csv('{}-categories.csv'.format(domain_text))
+    df.to_csv('{}-categoriu.csv'.format(domain_text))
 
 
 

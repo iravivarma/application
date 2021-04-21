@@ -16,6 +16,7 @@ import os
 
 
 
+#SQLALCHEMY_DATABASE_URL = "postgresql://postgres:qwerty@localhost:5432/course_website"
 
 SQLALCHEMY_DATABASE_URL = "postgres://tugrefnkrtbjvk:7d4c031048e0e5908f90135605bda7964d85c37a1f87a5f04871dbe2d9a19af3@ec2-54-237-143-127.compute-1.amazonaws.com:5432/das7sc8jfhka1q"
 
@@ -52,8 +53,8 @@ Base = declarative_base()
 db = SessionLocal()
 
 models.Base.metadata.create_all(bind=engine)
-
-# with open('E://coursewebsite/website/application/Domains.csv', "r") as f:
+#####Pushing domains to postgresql#####################
+# with open('C://Users//Ravi Varma Injeti/Desktop/hackrio/application/Domains.csv', "r") as f:
 # 	csv_reader = csv.DictReader(f)	
 
 # 	for row in csv_reader:
@@ -67,42 +68,50 @@ models.Base.metadata.create_all(bind=engine)
 # 	db.commit()
 
 # db.close()
+#########################Pushing the categories to database#######################
+with open("C://Users//Ravi Varma Injeti/Desktop/hackrio/application/design-categories.csv", "r") as f:
+	csv_reader = csv.DictReader(f)
+	domain_id = crud.get_domain_id_by_name(db, 'design').id
+	# print(domain_id)
+	# print(type(domain_id))
+	today = datetime.datetime.now()
+	# print(today)
+	# print(type(today))
+	for row in csv_reader:
+		print(row)	
+		# time.sleep(1)
+		category_name = row["name"].split('-')
+		names = category_name[1:]
+		cat_names = '-'.join(names)
+		print(cat_names)
+		db_record = models.Categories(name = cat_names, domain_id = domain_id, created_date = str(today))
 
-# with open("E://coursewebsite/website/application/design-categories.csv", "r") as f:
-# 	csv_reader = csv.DictReader(f)
-# 	domain_id = crud.get_domain_id_by_name(db, 'design').id
-# 	print(domain_id)
-# 	print(type(domain_id))
-# 	today = datetime.datetime.now()
-# 	print(today)
-# 	print(type(today))
-# 	for row in csv_reader:
-# 		print(row)
-# 		# time.sleep(1)
+		db.add(db_record)
+	db.commit()
 
-# 		db_record = models.Categories(name = row["name"], domain_id = domain_id, created_date = str(today))
+db.close()
 
-# 		db.add(db_record)
-# 	db.commit()
-
-# db.close()
-
-
-for filename in os.listdir('E://coursewebsite/website/application/programming/'):
-	if filename.endswith('.csv'):
-		with open('E://coursewebsite/website/application/programming/' + filename, mode='r') as curr_file:
-			file_name = curr_file.name.split('/')
-			reader = csv.DictReader(curr_file)
-			print(file_name)
+####main###
+# for filename in os.listdir('E://coursewebsite/website/application/programming/'):
+# 	if filename.endswith('.csv'):
+# 		with open('E://coursewebsite/website/application/programming/' + filename, mode='r') as curr_file:
+# 			file_name = curr_file.name.split('/')
+# 			reader = csv.DictReader(curr_file)
+# 			print(file_name)
 			
-			##user_id = get_user(db, 'string')
-			domain= file_name[-2]
-			category=file_name[-1].split('_')
-			cat_id = crud.get_category(db, category[1]).id
-			# user_id = crud.get_user(db, 'Ravi').user_id
-			# print(user_id)
-			print(category)
-			print(domain)
+# 			##user_id = get_user(db, 'string')
+# 			domain= file_name[-2]
+# 			category=file_name[-1].split('_')
+# 			cat_id = crud.get_category(db, category[1]).id
+# 			# user_id = crud.get_user(db, 'Ravi').user_id
+# 			# print(user_id)
+# 			print(category)
+# 			print(domain)
+
+#####################################3
+
+
+
 			# print(cat_id)
 # for filename in os.listdir('E://coursewebsite/website/application/design/'):
 # 	print(filename)

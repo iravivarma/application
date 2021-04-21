@@ -102,7 +102,7 @@ class feedback(Questions):
 ##############################For Filters############################################
 
 class CourseFilters(BaseModel):
-    course_type : Optional[str] =None#= 'Docs,Video,Book'
+    course_level : Optional[str] =None#= 'Docs,Video,Book'
     course_medium:Optional[str] =None#= 'Beginner,Intermediate,Advanced'
     course_mode :Optional[str] = None #'Free,Paid'
 #####################For Authentication###############################

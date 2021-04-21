@@ -8,6 +8,8 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from typing import List
 from sqlalchemy.orm import load_only
+# from fastapi_pagination import Page, pagination_params
+# from fastapi_pagination.paginator import paginate
 
 
 
@@ -144,6 +146,11 @@ async def course_upvotes(course_name:str, db: Session = Depends(get_db)):
 	courseupvote = crud.upvote_course(db, course_name)
 	return courseupvote
 
+@course_router.get('/{course_name}/upvotes')
+async def get_course_upvotes(course_name:str , db: Session = Depends(get_db)):
+	courseUpvotes = crud.get_upvotes(db, course_name)
+	return {'upvotes':courseUpvotes[0]}
+
 @course_router.post('/{course_name}/downvote')
 async def course_downvote(course_name: str, db: Session = Depends(get_db)):
 	"""
@@ -152,6 +159,11 @@ async def course_downvote(course_name: str, db: Session = Depends(get_db)):
 	"""
 	coursedownvote = crud.downvote_course(db, course_name)
 	return coursedownvote
+
+@course_router.get('/{course_name}/downvote')
+async def get_course_downvotes(course_name:str, db:Session = Depends(get_db)):
+	coursedownvote = crud.get_downvotes(db, course_name)
+	return {'downvotes': coursedownvote[0]}
 
 
 @course_router.post('/{course_name}/questions')
@@ -189,8 +201,20 @@ async def get_courses_by_filter(domain_name: str, category_name: str, filters: s
 	domainID = crud.get_domain(db, domain_name).id
 	categoryID = crud.get_category(db, category_name).id
 	print(domainID, categoryID)
+	print(filters.__dict__)
 
-	courses = crud.get_courses_by_filters(db, domainID, categoryID, filters)
-	return courses
+	courses = list(crud.get_course_by_filter(db, domain_name, category_name, filters))
+	print(len(courses))
+	final_courses = []
+	for i in range(len(courses)):
+		temp = []
+		# courses[i][2]= courses[i][2][1:-1].replace("'", '')split(', ')
+		temp.extend(courses[i][0:2])
+		temp.append(courses[i][2][1:-1].replace("'", '').split(', '))
+		print(courses[i][2][1:-1].replace("'", '').split(', '))
+
+		final_courses.append(temp)
+
+	return final_courses
 
 
