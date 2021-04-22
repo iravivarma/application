@@ -141,7 +141,7 @@ def get_courses_by_category_name(db: Session, category_name: str):
 	then queries the Courses in Model classes if categories.id matches to the cat_id. If it is, returns all which it matches
 	"""
 	cat_id = get_category(db, category_name).id
-	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name).filter(models.Courses.categories_id == cat_id).all()
+	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name, Courses.course_tags, Courses.upvotes).filter(models.Courses.categories_id == cat_id).all()
 
 
 
@@ -186,7 +186,7 @@ def upvote_course(db: Session, course_name: str):
 	#course_upvote = db.query(models.Courses).filter(models.Courses.id == course_id).update({'models.Courses.upvotes': models.Courses.upvotes + 1})
 	course_upvote = db.query(models.Courses).filter(models.Courses.id == course_id.id).update({'upvotes': courseUpvote + 1})
 	db.commit()
-	return course_upvote
+	return courseUpvote + 1
 
 def get_upvotes(db:Session, course_name: str):
 	course_id = get_course(db,course_name)
@@ -208,12 +208,12 @@ def downvote_course(db: Session, course_name: str):
 	course_id = get_course(db, course_name)
 	course=course_id.__dict__
 	#print(course.upvotes)
-	courseDownvote= course['downvotes']
+	courseUpvote= course['upvotes']
 	#$print(type(courseUpvote))
 	#course_upvote = db.query(models.Courses).filter(models.Courses.id == course_id).update({'models.Courses.upvotes': models.Courses.upvotes + 1})
-	course_down_vote = db.query(models.Courses).filter(models.Courses.id == course_id.id).update({'downvotes': courseDownvote - 1})
+	course_down_vote = db.query(models.Courses).filter(models.Courses.id == course_id.id).update({'upvotes': courseUpvote - 1})
 	db.commit()
-	return course_down_vote
+	return courseUpvote - 1
 
 def get_downvotes(db: Session,course_name:str):
 	course_id = get_course(db, course_name)
