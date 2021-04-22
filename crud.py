@@ -1,4 +1,3 @@
-
 from sqlalchemy.orm import Session
 from fastapi import status
 from fastapi.exceptions import HTTPException
@@ -474,3 +473,4 @@ def get_course_by_filter(db: Session, domain_name:str, category_name:str, tag_fi
 	print(end)
 
 	return result
+
