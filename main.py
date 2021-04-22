@@ -197,23 +197,57 @@ async def dele_questions(question_id: int, db: Session=Depends(get_db)):
 async def get_courses_by_filter(domain_name: str, category_name: str, filters: schemas.CourseFilters, db: Session=Depends(get_db)):
 
 	
-	print(domain_name, category_name)
+	# print(domain_name, category_name)
 	domainID = crud.get_domain(db, domain_name).id
 	categoryID = crud.get_category(db, category_name).id
-	print(domainID, categoryID)
-	print(filters.__dict__)
+	# print(domainID, categoryID)
+	# print(filters.__dict__)
+	course_ids = []
+	mode_result, level_result, medium_result = crud.get_course_by_filter(db, domain_name, category_name, filters)
+	
+	# print(len(mode_result),len(level_result),len(medium_result))
+	if mode_result not in ['', None]:
+		if len(course_ids) ==0:
+			course_ids = [result[0] for result in mode_result]
+		else:
+			mode_result = [course_ids[i] for i in range(len(course_ids)) if course_ids[i] in mode_result]
+	#print(len(course_ids))
+	#print(course_ids)
 
-	courses = list(crud.get_course_by_filter(db, domain_name, category_name, filters))
-	print(len(courses))
+
+	if level_result not in ['', None]:
+		level_result = [result[0] for result in level_result]
+		# print(level_result)
+		# print(course_ids)
+		if len(course_ids) == 0:
+			course_ids = level_result
+		else:
+			course_ids = [course_ids[i] for i in range(len(course_ids)) if course_ids[i] in level_result]
+		
+		#print(len(course_ids))
+
+
+	if medium_result not in ['', None]:
+		medium_result = [result[0] for result in medium_result]
+		if len(course_ids) == 0:
+			course_ids = medium_result
+		else:
+			course_ids = [course_ids[i] for i in range(len(course_ids)) if course_ids[i] in medium_result]
+		
+		#print(len(course_ids))
+
+	all_courses = crud.get_courses_by_course_id(db, course_ids)
+	#print(course_ids)
 	final_courses = []
-	for i in range(len(courses)):
+	for course in range(len(all_courses)):
 		temp = []
-		# courses[i][2]= courses[i][2][1:-1].replace("'", '')split(', ')
-		temp.extend(courses[i][0:2])
-		temp.append(courses[i][2][1:-1].replace("'", '').split(', '))
-		print(courses[i][2][1:-1].replace("'", '').split(', '))
-
+		temp.extend(all_courses[course][0:])
+		temp[2] = temp[2][1:-1].replace("'",'').split(', ')
 		final_courses.append(temp)
+
+	
+
+
 
 	return final_courses
 

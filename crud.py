@@ -143,6 +143,20 @@ def get_courses_by_category_name(db: Session, category_name: str):
 	cat_id = get_category(db, category_name).id
 	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name).filter(models.Courses.categories_id == cat_id).all()
 
+
+
+def get_courses_by_course_id(db: Session, course_ids: list):
+	"""
+	function returns the courses by issuing the category name
+	cat-id:for category id, called the function of "get_category by giving the i/p parameters
+	db, category_name" and retrive the id of a category
+	then queries the Courses in Model classes if categories.id matches to the cat_id. If it is, returns all which it matches
+	"""
+	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name, Courses.course_tags).filter(models.Courses.id.in_(course_ids)).all()
+
+
+
+
 def get_categories_by_domain_name(db: Session, domain_name: str):
 	"""
 	function returns the categories by issuing the domain name
@@ -397,22 +411,56 @@ def delete_course(db: Session, course_name: str):
 def get_course_by_filter(db: Session, domain_name:str, category_name:str, tag_filters: schemas.CourseFilters):
 
 	tags = tag_filters.__dict__
-	tag_keys = tags.values()
+	tag_values = tags.values()
+	tag_keys = tags.keys()
+	#print(tag_keys)
+
 	filter_tags = list(tag_keys)
-	print(filter_tags)
+	#print(filter_tags)
 
 	f_tags = []
 	for tag in filter_tags:
 		split_tag = tag.split(',')
 		f_tags.extend(split_tag)
 
-	print(f_tags)
+	#print(f_tags)
 	domain_id = get_domain(db, domain_name).id
 	category_id = get_category(db, category_name).id
 
 	start = time.time()
 	#models.Courses.id == models.filters.course_id  ,
-	result = db.query(models.filters).join(models.Courses).filter( and_(models.filters.category_id == category_id, models.filters.c_type.in_(f_tags))).distinct(models.filters.course_id).with_entities(models.filters.course_id, models.Courses.course_name, models.Courses.course_tags).all()
+	# result = db.query(models.filters).join(models.Courses).filter(
+	# 	and_(models.filters.category_id == category_id, 
+	# 	or_(models.filters.c_type.in_(tags['course_medium'].split(',')),models.filters.c_type.in_(tags['course_level'].split(',')),
+	# 	models.filters.c_type.in_(tags['course_mode'].split(','))))).distinct(models.filters.course_id).with_entities(models.filters.course_id, models.Courses.course_name, models.Courses.course_tags).all()
+
+	mode_result = ''
+	level_result = ''
+	medium_result= ''
+	common_result = db.query(models.filters).join(models.Courses).filter(models.filters.category_id == category_id)
+	if tags['course_mode'] not in ['','string']:
+		mode_result = common_result.filter(models.filters.c_type.in_(tags['course_mode'].split(','))).distinct(models.filters.course_id).with_entities(models.filters.course_id).all()
+	if tags['course_level'] not in ['','string']:
+		level_result = common_result.filter(models.filters.c_type.in_(tags['course_level'].split(','))).distinct(models.filters.course_id).with_entities(models.filters.course_id).all()
+	if tags['course_medium'] not in ['','string']:
+		medium_result = common_result.filter(models.filters.c_type.in_(tags['course_medium'].split(','))).distinct(models.filters.course_id).with_entities(models.filters.course_id).all()
+
+	return mode_result, level_result, medium_result
+
+
+
+	
+	
+	#result = result.distinct(models.filters.course_id).with_entities(models.filters.course_id, models.Courses.course_name, models.Courses.course_tags).all()
+		# or_(models.filters.c_type.in_(tags['course_medium'].split(',')),models.filters.c_type.in_(tags['course_level'].split(',')),
+		# models.filters.c_type.in_(tags['course_mode'].split(','))))).distinct(models.filters.course_id).with_entities(models.filters.course_id, models.Courses.course_name, models.Courses.course_tags).all()
+
+
+
+
+		# and_(models.filters.category == 'course_medium', models.filters.c_type.in_(tags['course_medium'].split(','))),
+		# and_(models.filters.category == 'course_level', models.filters.c_type.in_(tags['course_level'].split(','))),
+		# and_(models.filters.category == 'course_mode',models.filters.c_type.in_(tags['course_mode'].split(','))))).distinct(models.filters.course_id).with_entities(models.filters.course_id, models.Courses.course_name, models.Courses.course_tags).all()
 	# result = db.query(models.filters).filter(models.filters.category_id == category_id)
 	# result = result.filter( models.filters.c_type.in_(f_tags))
 	# # for tag in f_tags:
@@ -420,7 +468,7 @@ def get_course_by_filter(db: Session, domain_name:str, category_name:str, tag_fi
 	# # 	result = result.filter(models.filters.c_type == tag)
 
 	# result = result.with_entities(models.filters.course_id).all()
-	print(result)
+	# print(result)
 	end = time.time()-start
 	print(end)
 

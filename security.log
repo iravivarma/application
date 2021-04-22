@@ -4948,3 +4948,736 @@ TypeError: 'result' object does not support item assignment
 2021-04-21 18:13:17.167 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
 2021-04-21 18:13:21.948 ERROR basereload - signal_handler: Could not stop child process 6548: [Errno 10] No child processes
 2021-04-21 18:13:21.959 INFO basereload - shutdown: Stopping reloader process [5452]
+2021-04-22 07:00:22.735 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 07:00:22.739 INFO basereload - startup: Started reloader process [23344] using statreload
+2021-04-22 07:00:44.016 INFO main - serve: Started server process [16756]
+2021-04-22 07:00:44.017 INFO on - startup: Waiting for application startup.
+2021-04-22 07:00:44.026 INFO on - startup: Application startup complete.
+2021-04-22 07:39:50.615 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 07:39:50.618 INFO basereload - startup: Started reloader process [19672] using statreload
+2021-04-22 07:39:52.256 INFO main - serve: Started server process [14888]
+2021-04-22 07:39:52.257 INFO on - startup: Waiting for application startup.
+2021-04-22 07:39:52.258 INFO on - startup: Application startup complete.
+2021-04-22 07:40:52.962 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 206, in get_courses_by_filter
+    courses = list(crud.get_course_by_filter(db, domain_name, category_name, filters))
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\crud.py", line 420, in get_course_by_filter
+    and_(models.filters.category == 'course_medium', models.filters.c_type.in_(tag_filters['course_medium'].split(','))),
+TypeError: 'CourseFilters' object is not subscriptable
+2021-04-22 07:42:06.587 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:42:08.150 INFO main - serve: Started server process [4192]
+2021-04-22 07:42:08.151 INFO on - startup: Waiting for application startup.
+2021-04-22 07:42:08.154 INFO on - startup: Application startup complete.
+2021-04-22 07:47:58.673 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:48:16.355 ERROR basereload - signal_handler: Could not stop child process 10668: [WinError 5] Access is denied
+2021-04-22 07:48:16.370 INFO basereload - shutdown: Stopping reloader process [19672]
+2021-04-22 07:49:01.712 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 07:49:01.713 INFO basereload - startup: Started reloader process [18024] using statreload
+2021-04-22 07:49:03.261 INFO main - serve: Started server process [7788]
+2021-04-22 07:49:03.262 INFO on - startup: Waiting for application startup.
+2021-04-22 07:49:03.264 INFO on - startup: Application startup complete.
+2021-04-22 07:51:01.965 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:51:10.635 INFO main - serve: Started server process [8248]
+2021-04-22 07:51:10.635 INFO on - startup: Waiting for application startup.
+2021-04-22 07:51:10.638 INFO on - startup: Application startup complete.
+2021-04-22 07:54:25.327 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:54:27.198 INFO main - serve: Started server process [3180]
+2021-04-22 07:54:27.199 INFO on - startup: Waiting for application startup.
+2021-04-22 07:54:27.203 INFO on - startup: Application startup complete.
+2021-04-22 07:54:50.977 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:54:52.921 INFO main - serve: Started server process [7944]
+2021-04-22 07:54:52.922 INFO on - startup: Waiting for application startup.
+2021-04-22 07:54:52.924 INFO on - startup: Application startup complete.
+2021-04-22 07:55:13.724 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:55:15.767 INFO main - serve: Started server process [13000]
+2021-04-22 07:55:15.768 INFO on - startup: Waiting for application startup.
+2021-04-22 07:55:15.770 INFO on - startup: Application startup complete.
+2021-04-22 07:55:36.219 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 07:55:38.187 INFO main - serve: Started server process [11788]
+2021-04-22 07:55:38.188 INFO on - startup: Waiting for application startup.
+2021-04-22 07:55:38.192 INFO on - startup: Application startup complete.
+2021-04-22 07:55:39.836 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:55:42.111 INFO main - serve: Started server process [8084]
+2021-04-22 07:55:42.112 INFO on - startup: Waiting for application startup.
+2021-04-22 07:55:42.116 INFO on - startup: Application startup complete.
+2021-04-22 07:55:56.262 INFO main - shutdown: Shutting down
+2021-04-22 07:55:56.280 ERROR basereload - signal_handler: Could not stop child process 8084: [Errno 10] No child processes
+2021-04-22 07:55:56.312 INFO basereload - shutdown: Stopping reloader process [18024]
+2021-04-22 07:55:59.701 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 07:55:59.702 INFO basereload - startup: Started reloader process [13452] using statreload
+2021-04-22 07:56:01.696 INFO main - serve: Started server process [14184]
+2021-04-22 07:56:01.697 INFO on - startup: Waiting for application startup.
+2021-04-22 07:56:01.699 INFO on - startup: Application startup complete.
+2021-04-22 07:56:16.698 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:56:18.689 INFO main - serve: Started server process [14428]
+2021-04-22 07:56:18.690 INFO on - startup: Waiting for application startup.
+2021-04-22 07:56:18.692 INFO on - startup: Application startup complete.
+2021-04-22 07:56:29.482 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 07:56:31.356 INFO main - serve: Started server process [2444]
+2021-04-22 07:56:31.357 INFO on - startup: Waiting for application startup.
+2021-04-22 07:56:31.359 INFO on - startup: Application startup complete.
+2021-04-22 07:56:53.274 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:56:55.131 INFO main - serve: Started server process [4828]
+2021-04-22 07:56:55.132 INFO on - startup: Waiting for application startup.
+2021-04-22 07:56:55.132 INFO on - startup: Application startup complete.
+2021-04-22 07:57:09.608 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:57:11.606 INFO main - serve: Started server process [8816]
+2021-04-22 07:57:11.607 INFO on - startup: Waiting for application startup.
+2021-04-22 07:57:11.608 INFO on - startup: Application startup complete.
+2021-04-22 07:58:40.210 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:58:42.095 INFO main - serve: Started server process [20808]
+2021-04-22 07:58:42.096 INFO on - startup: Waiting for application startup.
+2021-04-22 07:58:42.098 INFO on - startup: Application startup complete.
+2021-04-22 07:58:50.344 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 07:58:52.389 INFO main - serve: Started server process [5536]
+2021-04-22 07:58:52.390 INFO on - startup: Waiting for application startup.
+2021-04-22 07:58:52.391 INFO on - startup: Application startup complete.
+2021-04-22 08:00:57.843 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 08:00:59.866 INFO main - serve: Started server process [7132]
+2021-04-22 08:00:59.867 INFO on - startup: Waiting for application startup.
+2021-04-22 08:00:59.871 INFO on - startup: Application startup complete.
+2021-04-22 08:03:11.017 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 08:03:12.970 INFO main - serve: Started server process [17908]
+2021-04-22 08:03:12.988 INFO on - startup: Waiting for application startup.
+2021-04-22 08:03:12.992 INFO on - startup: Application startup complete.
+2021-04-22 08:09:22.383 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 08:09:30.239 WARNING statreload - should_restart: Detected file change in 'crud.py'. Reloading...
+2021-04-22 08:21:25.963 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 08:21:25.964 INFO basereload - startup: Started reloader process [19860] using statreload
+2021-04-22 08:21:27.823 INFO main - serve: Started server process [4880]
+2021-04-22 08:21:27.824 INFO on - startup: Waiting for application startup.
+2021-04-22 08:21:27.828 INFO on - startup: Application startup complete.
+2021-04-22 08:21:31.928 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 208, in get_courses_by_filter
+    level_result = [course_ids.append(result[0]) for result in mode_result if result[0] not in course_ids]
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 208, in <listcomp>
+    level_result = [course_ids.append(result[0]) for result in mode_result if result[0] not in course_ids]
+TypeError: 'NoneType' object is not subscriptable
+2021-04-22 08:22:32.027 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:22:33.992 INFO main - serve: Started server process [19696]
+2021-04-22 08:22:33.993 INFO on - startup: Waiting for application startup.
+2021-04-22 08:22:33.995 INFO on - startup: Application startup complete.
+2021-04-22 08:23:12.851 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:23:14.818 INFO main - serve: Started server process [21032]
+2021-04-22 08:23:14.818 INFO on - startup: Waiting for application startup.
+2021-04-22 08:23:14.821 INFO on - startup: Application startup complete.
+2021-04-22 08:24:06.995 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:24:08.838 INFO main - serve: Started server process [1044]
+2021-04-22 08:24:08.839 INFO on - startup: Waiting for application startup.
+2021-04-22 08:24:08.841 INFO on - startup: Application startup complete.
+2021-04-22 08:24:35.004 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:24:36.801 INFO main - serve: Started server process [13284]
+2021-04-22 08:24:36.801 INFO on - startup: Waiting for application startup.
+2021-04-22 08:24:36.804 INFO on - startup: Application startup complete.
+2021-04-22 08:25:26.900 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:25:28.856 INFO main - serve: Started server process [8700]
+2021-04-22 08:25:28.857 INFO on - startup: Waiting for application startup.
+2021-04-22 08:25:28.862 INFO on - startup: Application startup complete.
+2021-04-22 08:26:36.863 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:26:49.603 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:27:32.629 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 08:27:32.631 INFO basereload - startup: Started reloader process [4000] using statreload
+2021-04-22 08:27:34.424 INFO main - serve: Started server process [15820]
+2021-04-22 08:27:34.425 INFO on - startup: Waiting for application startup.
+2021-04-22 08:27:34.429 INFO on - startup: Application startup complete.
+2021-04-22 08:28:24.191 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:28:26.280 INFO main - serve: Started server process [18512]
+2021-04-22 08:28:26.280 INFO on - startup: Waiting for application startup.
+2021-04-22 08:28:26.282 INFO on - startup: Application startup complete.
+2021-04-22 08:31:48.213 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:32:06.398 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:33:12.614 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 08:33:12.616 INFO basereload - startup: Started reloader process [3840] using statreload
+2021-04-22 08:33:14.532 INFO main - serve: Started server process [2072]
+2021-04-22 08:33:14.539 INFO on - startup: Waiting for application startup.
+2021-04-22 08:33:14.543 INFO on - startup: Application startup complete.
+2021-04-22 08:34:53.054 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:34:54.896 INFO main - serve: Started server process [10960]
+2021-04-22 08:34:54.898 INFO on - startup: Waiting for application startup.
+2021-04-22 08:34:54.905 INFO on - startup: Application startup complete.
+2021-04-22 08:36:55.352 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:37:28.388 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:38:33.338 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 08:38:33.340 INFO basereload - startup: Started reloader process [8784] using statreload
+2021-04-22 08:38:34.863 INFO main - serve: Started server process [13328]
+2021-04-22 08:38:34.864 INFO on - startup: Waiting for application startup.
+2021-04-22 08:38:34.866 INFO on - startup: Application startup complete.
+2021-04-22 08:38:38.485 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 213, in get_courses_by_filter
+    if course_ids[ids] not in level_result:
+IndexError: list index out of range
+2021-04-22 08:39:37.211 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:39:38.781 INFO main - serve: Started server process [9332]
+2021-04-22 08:39:38.782 INFO on - startup: Waiting for application startup.
+2021-04-22 08:39:38.783 INFO on - startup: Application startup complete.
+2021-04-22 08:39:42.694 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 214, in get_courses_by_filter
+    print(course_ids['ids'])
+TypeError: list indices must be integers or slices, not str
+2021-04-22 08:40:39.732 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:40:41.351 INFO main - serve: Started server process [8856]
+2021-04-22 08:40:41.352 INFO on - startup: Waiting for application startup.
+2021-04-22 08:40:41.354 INFO on - startup: Application startup complete.
+2021-04-22 08:40:47.223 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 215, in get_courses_by_filter
+    print(course_ids['ids'])
+TypeError: list indices must be integers or slices, not str
+2021-04-22 08:41:35.105 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:41:36.669 INFO main - serve: Started server process [884]
+2021-04-22 08:41:36.670 INFO on - startup: Waiting for application startup.
+2021-04-22 08:41:36.672 INFO on - startup: Application startup complete.
+2021-04-22 08:41:40.714 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:41:42.249 INFO main - serve: Started server process [17464]
+2021-04-22 08:41:42.250 INFO on - startup: Waiting for application startup.
+2021-04-22 08:41:42.252 INFO on - startup: Application startup complete.
+2021-04-22 08:41:45.662 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 215, in get_courses_by_filter
+    print(course_ids['ids'])
+TypeError: list indices must be integers or slices, not str
+2021-04-22 08:42:07.200 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:42:08.821 INFO main - serve: Started server process [19856]
+2021-04-22 08:42:08.822 INFO on - startup: Waiting for application startup.
+2021-04-22 08:42:08.824 INFO on - startup: Application startup complete.
+2021-04-22 08:42:11.857 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 215, in get_courses_by_filter
+    print(course_ids[ids])
+IndexError: list index out of range
+2021-04-22 08:42:46.038 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:42:47.619 INFO main - serve: Started server process [20904]
+2021-04-22 08:42:47.620 INFO on - startup: Waiting for application startup.
+2021-04-22 08:42:47.622 INFO on - startup: Application startup complete.
+2021-04-22 08:42:54.020 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:42:55.616 INFO main - serve: Started server process [17864]
+2021-04-22 08:42:55.617 INFO on - startup: Waiting for application startup.
+2021-04-22 08:42:55.620 INFO on - startup: Application startup complete.
+2021-04-22 08:42:58.404 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 216, in get_courses_by_filter
+    print(course_ids[ids])
+IndexError: list index out of range
+2021-04-22 08:43:40.956 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:43:42.656 INFO main - serve: Started server process [1868]
+2021-04-22 08:43:42.657 INFO on - startup: Waiting for application startup.
+2021-04-22 08:43:42.659 INFO on - startup: Application startup complete.
+2021-04-22 08:43:45.035 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 217, in get_courses_by_filter
+    if course_ids[ids] not in level_result:
+IndexError: list index out of range
+2021-04-22 08:47:10.031 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:47:11.623 INFO main - serve: Started server process [1304]
+2021-04-22 08:47:11.623 INFO on - startup: Waiting for application startup.
+2021-04-22 08:47:11.625 INFO on - startup: Application startup complete.
+2021-04-22 08:47:16.375 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 218, in get_courses_by_filter
+    if course_ids[ids] not in level_result:
+IndexError: list index out of range
+2021-04-22 08:47:44.980 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:47:46.718 INFO main - serve: Started server process [4280]
+2021-04-22 08:47:46.718 INFO on - startup: Waiting for application startup.
+2021-04-22 08:47:46.720 INFO on - startup: Application startup complete.
+2021-04-22 08:47:49.809 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 217, in get_courses_by_filter
+    print(course_ids[ids])
+IndexError: list index out of range
+2021-04-22 08:49:49.752 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:49:51.357 INFO main - serve: Started server process [1988]
+2021-04-22 08:49:51.358 INFO on - startup: Waiting for application startup.
+2021-04-22 08:49:51.362 INFO on - startup: Application startup complete.
+2021-04-22 08:49:55.898 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:49:57.397 INFO main - serve: Started server process [6972]
+2021-04-22 08:49:57.398 INFO on - startup: Waiting for application startup.
+2021-04-22 08:49:57.401 INFO on - startup: Application startup complete.
+2021-04-22 08:50:06.804 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:50:08.298 INFO main - serve: Started server process [7964]
+2021-04-22 08:50:08.299 INFO on - startup: Waiting for application startup.
+2021-04-22 08:50:08.301 INFO on - startup: Application startup complete.
+2021-04-22 08:50:46.561 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:50:58.032 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:51:15.906 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 08:51:15.908 INFO basereload - startup: Started reloader process [20152] using statreload
+2021-04-22 08:51:17.456 INFO main - serve: Started server process [5536]
+2021-04-22 08:51:17.457 INFO on - startup: Waiting for application startup.
+2021-04-22 08:51:17.459 INFO on - startup: Application startup complete.
+2021-04-22 08:52:02.620 ERROR basereload - signal_handler: Could not stop child process 5536: [Errno 10] No child processes
+2021-04-22 08:52:02.638 INFO basereload - shutdown: Stopping reloader process [20152]
+2021-04-22 08:52:07.174 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 08:52:07.175 INFO basereload - startup: Started reloader process [9300] using statreload
+2021-04-22 08:52:08.614 INFO main - serve: Started server process [15480]
+2021-04-22 08:52:08.615 INFO on - startup: Waiting for application startup.
+2021-04-22 08:52:08.617 INFO on - startup: Application startup complete.
+2021-04-22 08:54:05.227 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:54:06.729 INFO main - serve: Started server process [7892]
+2021-04-22 08:54:06.730 INFO on - startup: Waiting for application startup.
+2021-04-22 08:54:06.733 INFO on - startup: Application startup complete.
+2021-04-22 08:57:08.718 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:57:10.309 INFO main - serve: Started server process [20960]
+2021-04-22 08:57:10.310 INFO on - startup: Waiting for application startup.
+2021-04-22 08:57:10.312 INFO on - startup: Application startup complete.
+2021-04-22 08:57:22.284 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 08:57:33.468 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:01:45.579 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 09:01:45.581 INFO basereload - startup: Started reloader process [20656] using statreload
+2021-04-22 09:01:47.200 INFO main - serve: Started server process [12848]
+2021-04-22 09:01:47.201 INFO on - startup: Waiting for application startup.
+2021-04-22 09:01:47.208 INFO on - startup: Application startup complete.
+2021-04-22 09:02:48.438 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:02:49.911 INFO main - serve: Started server process [12864]
+2021-04-22 09:02:49.912 INFO on - startup: Waiting for application startup.
+2021-04-22 09:02:49.914 INFO on - startup: Application startup complete.
+2021-04-22 09:02:59.072 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:03:00.643 INFO main - serve: Started server process [3920]
+2021-04-22 09:03:00.644 INFO on - startup: Waiting for application startup.
+2021-04-22 09:03:00.646 INFO on - startup: Application startup complete.
+2021-04-22 09:03:16.453 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 223, in get_courses_by_filter
+    course_ids = [result[0] for result in level_result]
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 223, in <listcomp>
+    course_ids = [result[0] for result in level_result]
+TypeError: 'int' object is not subscriptable
+2021-04-22 09:05:25.184 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:05:26.712 INFO main - serve: Started server process [13872]
+2021-04-22 09:05:26.712 INFO on - startup: Waiting for application startup.
+2021-04-22 09:05:26.716 INFO on - startup: Application startup complete.
+2021-04-22 09:05:32.934 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:05:34.480 INFO main - serve: Started server process [18376]
+2021-04-22 09:05:34.481 INFO on - startup: Waiting for application startup.
+2021-04-22 09:05:34.482 INFO on - startup: Application startup complete.
+2021-04-22 09:05:46.496 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:05:48.198 INFO main - serve: Started server process [7800]
+2021-04-22 09:05:48.198 INFO on - startup: Waiting for application startup.
+2021-04-22 09:05:48.200 INFO on - startup: Application startup complete.
+2021-04-22 09:07:19.221 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:07:20.792 INFO main - serve: Started server process [9208]
+2021-04-22 09:07:20.792 INFO on - startup: Waiting for application startup.
+2021-04-22 09:07:20.795 INFO on - startup: Application startup complete.
+2021-04-22 09:08:36.624 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:09:53.599 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:10:04.679 INFO config - bind_socket: Uvicorn running on http://127.0.0.1:9000 (Press CTRL+C to quit)
+2021-04-22 09:10:04.681 INFO basereload - startup: Started reloader process [13452] using statreload
+2021-04-22 09:10:06.241 INFO main - serve: Started server process [15888]
+2021-04-22 09:10:06.241 INFO on - startup: Waiting for application startup.
+2021-04-22 09:10:06.243 INFO on - startup: Application startup complete.
+2021-04-22 09:10:11.352 ERROR httptools_impl - run_asgi: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\protocols\http\httptools_impl.py", line 390, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\Ravi Varma Injeti\AppData\Roaming\Python\Python38\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "E:\applications\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "E:\applications\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "E:\applications\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "E:\applications\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "C:\Users\Ravi Varma Injeti\Desktop\hackrio\application\main.py", line 243, in get_courses_by_filter
+    all_courses[course][2] = all_courses[course][2][1:-1].replace("'",'').split(', ')
+TypeError: 'result' object does not support item assignment
+2021-04-22 09:11:03.972 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:11:05.652 INFO main - serve: Started server process [15296]
+2021-04-22 09:11:05.653 INFO on - startup: Waiting for application startup.
+2021-04-22 09:11:05.655 INFO on - startup: Application startup complete.
+2021-04-22 09:11:14.370 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:11:15.866 INFO main - serve: Started server process [12668]
+2021-04-22 09:11:15.867 INFO on - startup: Waiting for application startup.
+2021-04-22 09:11:15.869 INFO on - startup: Application startup complete.
+2021-04-22 09:11:29.566 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-04-22 09:11:31.158 INFO main - serve: Started server process [9280]
+2021-04-22 09:11:31.159 INFO on - startup: Waiting for application startup.
+2021-04-22 09:11:31.162 INFO on - startup: Application startup complete.
+2021-04-22 11:45:26.815 INFO main - shutdown: Shutting down
+2021-04-22 11:45:26.926 INFO on - shutdown: Waiting for application shutdown.
+2021-04-22 11:45:26.926 INFO on - shutdown: Application shutdown complete.
+2021-04-22 11:45:26.928 INFO main - serve: Finished server process [9280]
+2021-04-22 11:45:26.958 ERROR basereload - signal_handler: Could not stop child process 9280: [Errno 10] No child processes
+2021-04-22 11:45:26.981 INFO basereload - shutdown: Stopping reloader process [13452]
