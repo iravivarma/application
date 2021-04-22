@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from sqlalchemy.orm import Session
 from fastapi import status
 from fastapi.exceptions import HTTPException
