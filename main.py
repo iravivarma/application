@@ -1,3 +1,4 @@
+
 from sqlalchemy.orm import Session
 import crud, models, schemas
 import uvicorn
@@ -144,7 +145,7 @@ async def course_upvotes(course_name:str, db: Session = Depends(get_db)):
 	queries the api by calling the function"upvote_course"in crud
 	"""
 	courseupvote = crud.upvote_course(db, course_name)
-	return courseupvote
+	return {'votesCount':courseupvote + 1}
 
 @course_router.get('/{course_name}/upvotes')
 async def get_course_upvotes(course_name:str , db: Session = Depends(get_db)):
@@ -158,7 +159,7 @@ async def course_downvote(course_name: str, db: Session = Depends(get_db)):
 	queries the api by calling the function"downvote_course"in crud
 	"""
 	coursedownvote = crud.downvote_course(db, course_name)
-	return coursedownvote
+	return {'votesCount':coursedownvote - 1}
 
 @course_router.get('/{course_name}/downvote')
 async def get_course_downvotes(course_name:str, db:Session = Depends(get_db)):
