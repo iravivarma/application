@@ -78,7 +78,7 @@ async def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_
 
 @course_router.get("/domains")
 async def get_domains(domain_name: str, db: Session = Depends(get_db)):
-	domain_names = crud.get_domain(db, domain_name)
+	domain_names = crud.get_domain(db, domain_name)	
 	return domain_names
 
 @course_router.get("/domainbase")
@@ -193,17 +193,17 @@ async def dele_questions(question_id: int, db: Session=Depends(get_db)):
 	return crud.delete_questions(db, question_id = question_id)
 
 
-@course_router.post('/{domain_name}/{category_name}/courses')
-async def get_courses_by_filter(domain_name: str, category_name: str, filters: schemas.CourseFilters, db: Session=Depends(get_db)):
+@course_router.post('/{category_name}/courses')
+async def get_courses_by_filter(category_name: str, filters: schemas.CourseFilters, db: Session=Depends(get_db)):
 
 	
 	# print(domain_name, category_name)
-	domainID = crud.get_domain(db, domain_name).id
+	# domainID = crud.get_domain(db, domain_name).id
 	categoryID = crud.get_category(db, category_name).id
 	# print(domainID, categoryID)
 	# print(filters.__dict__)
 	course_ids = []
-	mode_result, level_result, medium_result = crud.get_course_by_filter(db, domain_name, category_name, filters)
+	mode_result, level_result, medium_result = crud.get_course_by_filter(db, category_name, filters)
 	
 	# print(len(mode_result),len(level_result),len(medium_result))
 	if mode_result not in ['', None]:
