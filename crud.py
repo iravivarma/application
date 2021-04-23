@@ -408,7 +408,7 @@ def delete_course(db: Session, course_name: str):
 # 	search_word = db.query(models.Categories).filter(models.Categories.name.like(word)).with_entities(Categories.name).all()
 # 	return search_wor
 
-def get_course_by_filter(db: Session, domain_name:str, category_name:str, tag_filters: schemas.CourseFilters):
+def get_course_by_filter(db: Session, category_name:str, tag_filters: schemas.CourseFilters):
 
 	tags = tag_filters.__dict__
 	tag_values = tags.values()
@@ -424,7 +424,7 @@ def get_course_by_filter(db: Session, domain_name:str, category_name:str, tag_fi
 		f_tags.extend(split_tag)
 
 	#print(f_tags)
-	domain_id = get_domain(db, domain_name).id
+	# domain_id = get_domain(db, domain_name).id
 	category_id = get_category(db, category_name).id
 
 	start = time.time()
@@ -473,3 +473,4 @@ def get_course_by_filter(db: Session, domain_name:str, category_name:str, tag_fi
 	print(end)
 
 	return result
+
