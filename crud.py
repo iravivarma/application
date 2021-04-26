@@ -67,6 +67,9 @@ def get_all_domains(db: Session, skip: int = 0, limit: int = 100):
 def get_all_categories(db: Session, skip: int = 0):
 	return db.query(models.Categories).with_entities(models.Categories.name).offset(skip).all()
 
+def get_all_courses(db:Session, skip:int = 0, limit: int = 20):
+	return db.query(models.Courses).with_entities(models.Courses.course_name).offset(skip).limit(limit).all()
+
 def get_category(db: Session, category_name: str):
 	'''
 	input: name of the category
