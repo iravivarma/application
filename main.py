@@ -115,12 +115,23 @@ async def get_courses_by_name_category(category_name: str, db: Session = Depends
     
 	"""
 	category_courses = crud.get_courses_by_category_name(db,category_name)
-	print(category_courses)
+	#print(category_courses)
 	# for cat_course in category_courses:
 	#     print(cat_course.course_tags)
 	#     if isinstance(cat_course.course_tags, str):
 	#         cat_course.course_tags = ast.literal_eval(cat_course.course_tags)
-	return category_courses
+	final_courses = []
+	for cat_course in category_courses:
+		#course = list(cat_course)#.__dict__
+		#print(course)
+		temp = []
+		temp.append(cat_course[0])
+		temp.append(cat_course[1])
+		temp.append(cat_course[3])
+		temp.append(cat_course[2][1:-1].replace("'",'').split(', '))
+		# temp[2] = temp[2][1:-1].replace("'",'').split(', ')
+		final_courses.append(temp)
+	return final_courses
 
 @course_router.get('/{domain_name}/categories')
 async def get_categories_by_name_domain(domain_name: str, db: Session = Depends(get_db)):
