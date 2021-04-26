@@ -76,6 +76,12 @@ async def read_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_
     print(users)
     return json_compatible_item_data
 
+@course_router.get("/all_courses")
+async def pagination(skip:int = 0, limit: int = 20, db:Session =Depends(get_db)):
+	courses = crud.get_all_courses(db, skip= skip, limit = limit)
+	json_compatible_item_data = jsonable_encoder(courses)
+	return json_compatible_item_data
+
 @course_router.get("/domains")
 async def get_domains(domain_name: str, db: Session = Depends(get_db)):
 	domain_names = crud.get_domain(db, domain_name)	
