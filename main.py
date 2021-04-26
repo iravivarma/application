@@ -155,7 +155,7 @@ async def course_upvotes(course_name:str, db: Session = Depends(get_db)):
 	queries the api by calling the function"upvote_course"in crud
 	"""
 	courseupvote = crud.upvote_course(db, course_name)
-	return {'votesCount':courseupvote + 1}
+	return {'votesCount':courseupvote }
 
 @course_router.get('/{course_name}/upvotes')
 async def get_course_upvotes(course_name:str , db: Session = Depends(get_db)):
