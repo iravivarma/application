@@ -322,25 +322,35 @@ def login_user_page(request: Request, redirect_url: Optional[str]=None, db: Sess
 @security_router.get("/profile")
 async def get_profile(request : Request, current_user: schemas.CoursesScope = Depends(get_current_active_user), db: Session = Depends(get_db)):
     if not current_user:
-        return "Not authorized"
+        return JSONResponse({'status_code' : status.HTTP_401_UNAUTHORIZED,
+            'detail': 'User not loggedin'})
     data = crud.get_user_email(db, current_user.email).__dict__
     print(data)
-    return templates.TemplateResponse("User_Profile.html", {"request": request, "username": data['name'],
-                                         "email": data["email"]})
+    return JSONResponse({'status_code' : status.HTTP_200_OK,
+                                'data': data,
+                                'detail': 'user login'})
 
 
 @security_router.post("/authenticate", response_model=schemas.Token)
-async def check_user_and_make_token(request: Request, db: Session = Depends(get_db)):
+async def check_user_and_make_token(request: schemas.authenticate_schema, db: Session = Depends(get_db)):
     formdata = await request.form()
     print(request)
     print(formdata)
     #print("the scopes are .......")
     #print(formdata.scopes)
     print(formdata["username"],formdata["password"])
-    authenticated_user = authenticate_user(db, formdata["username"],formdata["password"])
+    authenticated_user = authenticate_user(db, request.username,request.password)
     print(authenticated_user)
     if authenticated_user is None:
-        raise HTTPException(status_code=401, detail="Invalid username or password")
+        return JSONResponse({'status_code':status.HTTP_401_UNAUTHORIZED,
+            'detail':"Invalid username or password"})
+
+    if authenticated_user["active_yn"]==False:
+        return JSONResponse({
+            'status_code':status.HTTP_401_UNAUTHORIZED,
+             'detail':"User Not Activated. Please verify email"
+             })
+
 
     access_token_expires = timedelta(hours=ACCESS_TOKEN_EXPIRE_HOURS)
     log_info(logging, authenticated_user.email)
@@ -373,8 +383,13 @@ async def check_user_and_make_token(request: Request, db: Session = Depends(get_
 
 @security_router.get("/logout")
 async def logout_and_remove_cookie(request: Request, current_user: schemas.NewUser = Depends(get_current_active_user), db: Session = Depends(get_db)) -> "RedirectResponse":
-    response = RedirectResponse(url="/login", status_code=status.HTTP_303_SEE_OTHER)
-    if not current_user:
+    response = JSONResponse({
+        'status_code':status.HTTP_401_UNAUTHORIZED,
+        'url':'/login',
+        'detail':'not logged in to logout.'})
+
+    # if not current_user:
+    if current_user is None:
         return response
     # usertype = crud.get_user_third_party(current_user.email)
     # if usertype=="google":
@@ -408,7 +423,21 @@ async def newUser(user: schemas.user_item = Depends(), redirect_url:Optional[str
     print(get_password_hash(user.password))
     print("print the nortmal details")
     print(user.__dict__)
-    inserted_user = crud.create_user(db, user)
+    try:
+        inserted_user = crud.create_user(db, user)
+        
+        # print("user details..........")
+        # print(inserted_user.__dict__)
+        return JSONResponse({'status_code': status.HTTP_201_CREATED,
+                            'detail':'Account Created SUCCESSFULLY'})
+
+    except:
+        print("user already existed..........")
+        return JSONResponse({
+            'status_code':status.HTTP_409_CONFLICT,
+            'detail':'User Already Exists'
+            })
+
     #return inserted_user
     # except:
     #     raise HTTPException(status_code=409, detail="Invalid username/password or user already exists")
@@ -724,9 +753,9 @@ async def update_password(new_password_schema: schemas.NewPassword = Depends(), 
         update_result = crud.update_user_password(db, current_user.email, password)
         return update_result
     else:
-        return HTTPException(
-                    status_code=HTTP_403_FORBIDDEN,  detail="updated successfully"
-                )
+        return JSONResponse({
+                    'status_code':status.HTTP_403_FORBIDDEN,  "detail": "not updated successfully"
+                })
     #event_dict = {}
     #event_dict['Email']=Email
     #event_processor("PasswordUpdation",event_dict)

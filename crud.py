@@ -67,6 +67,9 @@ def get_all_domains(db: Session, skip: int = 0, limit: int = 100):
 def get_all_categories(db: Session, skip: int = 0):
 	return db.query(models.Categories).with_entities(models.Categories.name).offset(skip).all()
 
+def get_all_courses(db:Session, skip:int = 0, limit: int = 20):
+	return db.query(models.Courses).with_entities(models.Courses.course_name).offset(skip).limit(limit).all()
+
 def get_category(db: Session, category_name: str):
 	'''
 	input: name of the category
@@ -152,7 +155,7 @@ def get_courses_by_course_id(db: Session, course_ids: list):
 	db, category_name" and retrive the id of a category
 	then queries the Courses in Model classes if categories.id matches to the cat_id. If it is, returns all which it matches
 	"""
-	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name, Courses.course_tags).filter(models.Courses.id.in_(course_ids)).all()
+	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name, Courses.upvotes, Courses.course_tags).filter(models.Courses.id.in_(course_ids)).all()
 
 
 

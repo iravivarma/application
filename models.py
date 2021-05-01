@@ -61,7 +61,7 @@ class Courses(Base):
 	categories_id = Column(Integer, ForeignKey("categories.id"))
 	created_by = Column(Integer, ForeignKey("users.id"))
 	course_name = Column(String, index = True)
-	course_source = Column(String)
+	course_source = Column(String) 
 	course_link = Column(String, index = True)
 	description = Column(String, default = '')
 	course_tags = Column(JSON)

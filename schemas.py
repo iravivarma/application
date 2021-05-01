@@ -210,4 +210,8 @@ class SentPasscode:
 
 
 class Search_schema(BaseModel):
-    search_word = str
+    search_word : str
+
+class authenticate_schema(BaseModel):
+    email : str
+    password : str
