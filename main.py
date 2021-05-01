@@ -82,6 +82,7 @@ async def pagination(skip:int = 0, limit: int = 20, db:Session =Depends(get_db))
 	json_compatible_item_data = jsonable_encoder(courses)
 	return json_compatible_item_data
 
+
 @course_router.get("/domains")
 async def get_domains(domain_name: str, db: Session = Depends(get_db)):
 	domain_names = crud.get_domain(db, domain_name)	
@@ -254,12 +255,14 @@ async def get_courses_by_filter(category_name: str, filters: schemas.CourseFilte
 		#print(len(course_ids))
 
 	all_courses = crud.get_courses_by_course_id(db, course_ids)
-	#print(course_ids)
+	print(course_ids)
+	print(all_courses)
 	final_courses = []
 	for course in range(len(all_courses)):
 		temp = []
 		temp.extend(all_courses[course][0:])
-		temp[2] = temp[2][1:-1].replace("'",'').split(', ')
+		print("this is temp:",temp)
+		temp[3] = temp[3][1:-1].replace("'",'').split(', ')
 		final_courses.append(temp)
 
 	
