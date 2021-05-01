@@ -333,13 +333,13 @@ async def get_profile(request : Request, current_user: schemas.CoursesScope = De
 
 @security_router.post("/authenticate", response_model=schemas.Token)
 async def check_user_and_make_token(request: schemas.authenticate_schema, db: Session = Depends(get_db)):
-    formdata = await request.form()
-    print(request)
-    print(formdata)
+    # formdata = await request.form()
+    # print(request)
+    # print(formdata)
     #print("the scopes are .......")
     #print(formdata.scopes)
-    print(formdata["username"],formdata["password"])
-    authenticated_user = authenticate_user(db, request.username,request.password)
+    # print(formdata["username"],formdata["password"])
+    authenticated_user = authenticate_user(db, request.email,request.password)
     print(authenticated_user)
     if authenticated_user is None:
         return JSONResponse({'status_code':status.HTTP_401_UNAUTHORIZED,
