@@ -112,9 +112,9 @@ class Questions(Base):
     
 
 
-Users.__table__.create(bind=engine, checkfirst=True)
-Domain.__table__.create(bind=engine, checkfirst=True)
-Categories.__table__.create(bind=engine, checkfirst=True)
-Courses.__table__.create(bind=engine, checkfirst=True)
-Questions.__table__.create(bind=engine, checkfirst=True)
-filters.__table__.create(bind = engine, checkfirst = True)
+# Users.__table__.create(bind=engine, checkfirst=True)
+# Domain.__table__.create(bind=engine, checkfirst=True)
+# Categories.__table__.create(bind=engine, checkfirst=True)
+# Courses.__table__.create(bind=engine, checkfirst=True)
+# Questions.__table__.create(bind=engine, checkfirst=True)
+# filters.__table__.create(bind = engine, checkfirst = True)
