@@ -54,6 +54,7 @@ async def create_domain(domains: schemas.Domain_Create, db: Session = Depends(ge
 
 ###create the Categories Request#####
 
+
 @course_router.post('/{domain_name}/createcategory')
 async def create_category(domain_name: str, cat_name: schemas.categories_create, db: Session = Depends(get_db)):
 	'''
