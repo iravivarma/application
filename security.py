@@ -286,7 +286,7 @@ def authenticate_user(db, username: str, password: str):
         The user info.
     """
     user = crud.get_user(db, username)
-    print(user.__dict__)
+    print(user)
 
     if not user:
         return False
