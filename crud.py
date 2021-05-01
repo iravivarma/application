@@ -153,9 +153,9 @@ def get_courses_by_course_id(db: Session, course_ids: list):
 	function returns the courses by issuing the category name
 	cat-id:for category id, called the function of "get_category by giving the i/p parameters
 	db, category_name" and retrive the id of a category
-	then queries the Courses in Model classes if categories.id matches to the cat_id. If it is, returns all which it matche
+	then queries the Courses in Model classes if categories.id matches to the cat_id. If it is, returns all which it matches
 	"""
-	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name, Courses.course_tags, Courses.upvotes).filter(models.Courses.id.in_(course_ids)).all()
+	return db.query(models.Courses).with_entities(Courses.id, Courses.course_name, Courses.upvotes, Courses.course_tags).filter(models.Courses.id.in_(course_ids)).all()
 
 
 
