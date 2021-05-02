@@ -122,4 +122,4 @@ class Questions(Base):
 # Categories.__table__.create(bind=engine, checkfirst=True)
 # Courses.__table__.create(bind=engine, checkfirst=True)
 # Questions.__table__.create(bind=engine, checkfirst=True)
-filters.__table__.create(bind = engine2, checkfirst = True)
+# filters.__table__.create(bind = engine2, checkfirst = True)
