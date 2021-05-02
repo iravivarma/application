@@ -32,7 +32,7 @@ def create_user(db: Session, user: schemas.NewUser):
 	'''
 	print(user.__dict__)
 	password = user.password
-	user_details = models.Users(name = user.name, email = user.email, password= password, joined_on = str(datetime.datetime.now()))
+	user_details = models.Users(name = user.name, email = user.email, password= password, active_yn= True, joined_on = str(datetime.datetime.now()))
 	db.add(user_details)
 	db.commit()
 	db.refresh(user_details)
@@ -411,7 +411,7 @@ def delete_course(db: Session, course_name: str):
 # 	search_word = db.query(models.Categories).filter(models.Categories.name.like(word)).with_entities(Categories.name).all()
 # 	return search_wor
 
-def get_course_by_filter(db: Session, category_name:str, tag_filters: schemas.CourseFilters):
+def get_course_by_filter(db: Session, category_id:int, tag_filters: schemas.CourseFilters):
 
 	tags = tag_filters.__dict__
 	tag_values = tags.values()
@@ -428,7 +428,9 @@ def get_course_by_filter(db: Session, category_name:str, tag_filters: schemas.Co
 
 	#print(f_tags)
 	# domain_id = get_domain(db, domain_name).id
-	category_id = get_category(db, category_name).id
+	# print(category_name)
+	# category_id = get_category(db, category_name).id
+
 
 	start = time.time()
 	#models.Courses.id == models.filters.course_id  ,
@@ -440,7 +442,7 @@ def get_course_by_filter(db: Session, category_name:str, tag_filters: schemas.Co
 	mode_result = ''
 	level_result = ''
 	medium_result= ''
-	common_result = db.query(models.filters).join(models.Courses).filter(models.filters.category_id == category_id)
+	common_result = db.query(models.filters).filter(models.filters.category_id == category_id)
 	if tags['course_mode'] not in ['','string']:
 		mode_result = common_result.filter(models.filters.c_type.in_(tags['course_mode'].split(','))).distinct(models.filters.course_id).with_entities(models.filters.course_id).all()
 	if tags['course_level'] not in ['','string']:

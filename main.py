@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 import crud, models, schemas
 import uvicorn
-from database import SessionLocal, engine
+from database import SessionLocal, SessionLocal2, engine, engine2
 from fastapi import Request, APIRouter, FastAPI, Depends
 import time, ast
 from fastapi.encoders import jsonable_encoder
@@ -19,6 +19,13 @@ course_router = APIRouter()
 
 def get_db():
     db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+def get_db2():
+    db = SessionLocal2()
     try:
         yield db
     finally:
@@ -213,16 +220,16 @@ async def dele_questions(question_id: int, db: Session=Depends(get_db)):
 
 
 @course_router.post('/{category_name}/courses')
-async def get_courses_by_filter(category_name: str, filters: schemas.CourseFilters, db: Session=Depends(get_db)):
+async def get_courses_by_filter(category_name: str, filters: schemas.CourseFilters, db: Session=Depends(get_db), db2: Session=Depends(get_db2)):
 
 	
 	# print(domain_name, category_name)
 	# domainID = crud.get_domain(db, domain_name).id
 	categoryID = crud.get_category(db, category_name).id
-	# print(domainID, categoryID)
+	print(categoryID)
 	# print(filters.__dict__)
 	course_ids = []
-	mode_result, level_result, medium_result = crud.get_course_by_filter(db, category_name, filters)
+	mode_result, level_result, medium_result = crud.get_course_by_filter(db2, categoryID, filters)
 	
 	# print(len(mode_result),len(level_result),len(medium_result))
 	if mode_result not in ['', None]:
@@ -256,13 +263,13 @@ async def get_courses_by_filter(category_name: str, filters: schemas.CourseFilte
 		#print(len(course_ids))
 
 	all_courses = crud.get_courses_by_course_id(db, course_ids)
-	print(course_ids)
-	print(all_courses)
+	# print(course_ids)
+	print(len(all_courses))
 	final_courses = []
 	for course in range(len(all_courses)):
 		temp = []
 		temp.extend(all_courses[course][0:])
-		print("this is temp:",temp)
+		# print("this is temp:",temp)
 		temp[3] = temp[3][1:-1].replace("'",'').split(', ')
 		final_courses.append(temp)
 

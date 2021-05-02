@@ -73,10 +73,17 @@ SECRET_KEY = "bfdhvsdvfakuydgvfkajhsvlawegfUIFBVLjhvfulYFVsyuVFjavsfljv"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_HOURS = 3
 COOKIE_AUTHORIZATION_NAME = "Authorization"
-COOKIE_DOMAIN = 'https://fast-wave-91117.herokuapp.com/'
+#COOKIE_DOMAIN = 'https://fast-wave-91117.herokuapp.com/'
 # give the time for each token.
 # Note: it is in minutes.
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+COOKIE_DOMAIN = "127.0.0.1"
+
+PROTOCOL = "http://"
+FULL_HOST_NAME = "localhost"
+#FULL_HOST_NAME = "fast-wave-91117.herokuapp.com"
+PORT_NUMBER = 8000
+
 
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -148,7 +155,7 @@ class OAuth2PasswordBearerCookie(OAuth2):
 
 
 
-oauth2_scheme = OAuth2PasswordBearerCookie(tokenUrl="/token",)
+oauth2_scheme = OAuth2PasswordBearerCookie(tokenUrl="/token")
 
 
 
@@ -296,7 +303,7 @@ def authenticate_user(db, username: str, password: str):
 
 
 
-def get_current_active_user(current_user: schemas.CoursesScope = Security(get_current_google_user)):
+def get_current_active_user(current_user: schemas.CoursesScope = Depends(get_current_google_user)):
     # , current_google_user: User = Depends(get_current_google_user)
     """
     """
@@ -324,11 +331,12 @@ async def get_profile(request : Request, current_user: schemas.CoursesScope = De
     if not current_user:
         return JSONResponse({'status_code' : status.HTTP_401_UNAUTHORIZED,
             'detail': 'User not loggedin'})
-    data = crud.get_user_email(db, current_user.email).__dict__
-    print(data)
+    data = crud.get_user_email(db, current_user.email)#.__dict__
+    print("printing the profile.......")
+    print(data.__dict__)
     return JSONResponse({'status_code' : status.HTTP_200_OK,
-                                'data': data,
-                                'detail': 'user login'})
+            'data': json.dumps(data.__dict__),
+            'detail': 'user login'})
 
 
 @security_router.post("/authenticate", response_model=schemas.Token)
@@ -340,12 +348,13 @@ async def check_user_and_make_token(request: schemas.authenticate_schema, db: Se
     #print(formdata.scopes)
     # print(formdata["username"],formdata["password"])
     authenticated_user = authenticate_user(db, request.email,request.password)
+    print(request.email)
     print(authenticated_user)
     if authenticated_user is None:
         return JSONResponse({'status_code':status.HTTP_401_UNAUTHORIZED,
             'detail':"Invalid username or password"})
 
-    if authenticated_user["active_yn"]==False:
+    if authenticated_user.active_yn==False:
         return JSONResponse({
             'status_code':status.HTTP_401_UNAUTHORIZED,
              'detail':"User Not Activated. Please verify email"

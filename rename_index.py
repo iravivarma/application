@@ -22,51 +22,59 @@ import ast
 #SQLALCHEMY_DATABASE_URL = "postgresql://postgres:qwerty@localhost:5432/course_website"
 
 SQLALCHEMY_DATABASE_URL = "postgres://tugrefnkrtbjvk:7d4c031048e0e5908f90135605bda7964d85c37a1f87a5f04871dbe2d9a19af3@ec2-54-237-143-127.compute-1.amazonaws.com:5432/das7sc8jfhka1q"
+SQLALCHEMY_DATABASE_URL2 = "postgres://pdszntpmoaxibt:3bf9c2ecb5a8b51b0dec9099fee6277c6070117918489869ddec6dfe1f4e029c@ec2-35-174-35-242.compute-1.amazonaws.com:5432/d9a6vbq4d0d2q8"
 
+engine2 = create_engine(
+    SQLALCHEMY_DATABASE_URL2
+)
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
 )
+
+SessionLocal2 = sessionmaker(autocommit=False, autoflush=False, bind=engine2)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
 db = SessionLocal()
+db2 = SessionLocal2()
 
 
 
 models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine2)
 
 
-for filename in os.listdir('C://Users//Ravi Varma Injeti/Desktop/hackrio/application/design/'):
-	print(filename)
-	if filename.endswith('.csv'):
-		# with open('E://coursewebsite/website/application/programming/' + filename, mode='r') as curr_file:
-		# 	print(curr_file)
-		#df = pd.read_csv(curr_file)
-		file_name = filename.split('_')[1]
-		print(file_name)
-		cat_name = file_name.split('-')
-		name = cat_name[1:]
-		category = '-'.join(name)
-		df = pd.read_csv('C://Users//Ravi Varma Injeti/Desktop/hackrio/application/design/'+filename)
+# for filename in os.listdir('C://Users//Ravi Varma Injeti/Desktop/hackrio/application/design/'):
+# 	print(filename)
+# 	if filename.endswith('.csv'):
+# 		# with open('E://coursewebsite/website/application/programming/' + filename, mode='r') as curr_file:
+# 		# 	print(curr_file)
+# 		#df = pd.read_csv(curr_file)
+# 		file_name = filename.split('_')[1]
+# 		print(file_name)
+# 		cat_name = file_name.split('-')
+# 		name = cat_name[1:]
+# 		category = '-'.join(name)
+# 		df = pd.read_csv('C://Users//Ravi Varma Injeti/Desktop/hackrio/application/design/'+filename)
 		
-		df.columns=["course_name",
-			"course_link",
-			"course_source",
-			"course_tags"]
-		cat_id = crud.get_category(db, category).id
-		user_id = crud.get_user(db, 'Ravi').id
-		for index, data in df.iterrows():
-			# print(data.course_name)
-			# print(data.course_link)
-			# print(data.course_source)
-			# print(data.course_tags)
-			db_record = models.Courses(categories_id = cat_id, created_by = user_id, course_name = data.course_name, course_link = data.course_link,
-				course_source = data.course_source, course_tags = data.course_tags )
+# 		df.columns=["course_name",
+# 			"course_link",
+# 			"course_source",
+# 			"course_tags"]
+# 		cat_id = crud.get_category(db, category).id
+# 		user_id = crud.get_user(db, 'Ravi').id
+# 		for index, data in df.iterrows():
+# 			# print(data.course_name)
+# 			# print(data.course_link)
+# 			# print(data.course_source)
+# 			# print(data.course_tags)
+# 			db_record = models.Courses(categories_id = cat_id, created_by = user_id, course_name = data.course_name, course_link = data.course_link,
+# 				course_source = data.course_source, course_tags = data.course_tags )
 
-			db.add(db_record)
-		db.commit()
-	db.close()
+# 			db.add(db_record)
+# 		db.commit()
+# 	db.close()
 
 def insert_filters(category_name):
 	course_mode = ['Free', 'Paid'];
@@ -185,9 +193,10 @@ def insert_filters(category_name):
 					# 		c_type = tags)
 					
 					# db_record = models.filter_tags(course_id = data.course_id, category_id = data.category_id, course_tags = data.course_tags)
-					db.add(db_record)
-				db.commit()
-		db.close()
+					db2.add(db_record)
+				db2.commit()
+		db2.close()
+	db.close()
 
 
 
@@ -196,6 +205,6 @@ def insert_filters(category_name):
 
 
 		
-files = insert_filters('design')	
+files = insert_filters('data-science')	
 print(files)
 
