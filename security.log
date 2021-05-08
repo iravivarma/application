@@ -7439,3 +7439,20 @@ sqlalchemy.exc.InvalidRequestError: Don't know how to join to <class 'models.Cou
 2021-05-02 15:14:51.978 INFO on - startup: Waiting for application startup.
 2021-05-02 15:14:51.978 INFO on - startup: Application startup complete.
 2021-05-02 15:16:13.179 WARNING statreload - should_restart: Detected file change in 'main.py'. Reloading...
+2021-05-02 15:16:33.526 INFO main - serve: Started server process [24676]
+2021-05-02 15:16:33.526 INFO on - startup: Waiting for application startup.
+2021-05-02 15:16:33.528 INFO on - startup: Application startup complete.
+2021-05-02 15:21:12.210 WARNING statreload - should_restart: Detected file change in 'security.py'. Reloading...
+2021-05-02 15:21:29.302 WARNING statreload - should_restart: Detected file change in 'models.py'. Reloading...
+2021-05-02 15:21:36.096 WARNING statreload - should_restart: Detected file change in 'pilot.py'. Reloading...
+2021-05-02 15:22:44.420 INFO main - serve: Started server process [21040]
+2021-05-02 15:22:44.421 INFO on - startup: Waiting for application startup.
+2021-05-02 15:22:44.422 INFO on - startup: Application startup complete.
+2021-05-02 16:45:56.091 WARNING statreload - should_restart: Detected file change in 'rename_index.py'. Reloading...
+2021-05-02 16:46:09.248 INFO main - serve: Started server process [17392]
+2021-05-02 16:46:09.249 INFO on - startup: Waiting for application startup.
+2021-05-02 16:46:09.251 INFO on - startup: Application startup complete.
+2021-05-02 17:04:00.665 WARNING statreload - should_restart: Detected file change in 'rename_index.py'. Reloading...
+2021-05-02 17:04:14.566 INFO main - serve: Started server process [24716]
+2021-05-02 17:04:14.567 INFO on - startup: Waiting for application startup.
+2021-05-02 17:04:14.568 INFO on - startup: Application startup complete.

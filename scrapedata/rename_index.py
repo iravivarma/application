@@ -205,6 +205,6 @@ def insert_filters(category_name):
 
 
 		
-files = insert_filters('data-science')	
+files = insert_filters('design')	
 print(files)
 

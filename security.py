@@ -73,15 +73,15 @@ SECRET_KEY = "bfdhvsdvfakuydgvfkajhsvlawegfUIFBVLjhvfulYFVsyuVFjavsfljv"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_HOURS = 3
 COOKIE_AUTHORIZATION_NAME = "Authorization"
-#COOKIE_DOMAIN = 'https://fast-wave-91117.herokuapp.com/'
+COOKIE_DOMAIN = 'https://fast-wave-91117.herokuapp.com/'
 # give the time for each token.
 # Note: it is in minutes.
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
-COOKIE_DOMAIN = "127.0.0.1"
+# COOKIE_DOMAIN = "127.0.0.1"
 
 PROTOCOL = "http://"
-FULL_HOST_NAME = "localhost"
-#FULL_HOST_NAME = "fast-wave-91117.herokuapp.com"
+# FULL_HOST_NAME = "localhost"
+FULL_HOST_NAME = "fast-wave-91117.herokuapp.com"
 PORT_NUMBER = 8000
 
 
